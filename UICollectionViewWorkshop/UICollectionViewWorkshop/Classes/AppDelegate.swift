@@ -12,9 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var device = UIDevice.current
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
+        
+        if device.userInterfaceIdiom == .phone {
+            
+        } else {
+            
+        }
+        
         window?.rootViewController = UIViewController()
         window?.makeKeyAndVisible()
         return true

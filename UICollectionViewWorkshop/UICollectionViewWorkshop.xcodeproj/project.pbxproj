@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A18E34281DC4941500E1CC7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E34271DC4941500E1CC7E /* AppDelegate.swift */; };
-		A18E342F1DC4941500E1CC7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A18E342E1DC4941500E1CC7E /* Assets.xcassets */; };
-		A18E34321DC4941500E1CC7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A18E34301DC4941500E1CC7E /* LaunchScreen.storyboard */; };
 		A18E343D1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E343C1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift */; };
+		B27A90BD33CC83B04BAC6C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27A9D4639130424FBEF5B0D /* Assets.xcassets */; };
+		B27A9112B1798EB62790E5F6 /* EventsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A93B84173CA7F454B8791 /* EventsProvider.swift */; };
+		B27A91D8D1755EA86E2B34B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */; };
+		B27A934967EDB19773236E05 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9BE30099A74A3FC68BC9 /* CalendarCollectionViewCell.swift */; };
+		B27A9471D78B0D046491ECD2 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A99A707B65C352F974DAB /* CarouselViewController.swift */; };
+		B27A960692F47827D086110D /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A92376AE36A5DCD52014B /* CarouselCollectionViewCell.swift */; };
+		B27A979FBDADA4775F918163 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A990E3158C3FEB54D872E /* CalendarViewController.swift */; };
+		B27A98C257602B59672AA891 /* CalendarCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9A680799497AD66BE04A /* CalendarCollectionViewLayout.swift */; };
+		B27A9A3C7EEEDE593C2B5BB1 /* HandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9FD5A1D1C78914438920 /* HandView.swift */; };
+		B27A9B86182FE01AE933D69F /* CarouselCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9FDE20632E7C038D81EB /* CarouselCollectionViewLayout.swift */; };
+		B27A9C709E19C9D6FDC5F75D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27A945E573EA929C4AFAACB /* LaunchScreen.storyboard */; };
+		B27A9E0C86C8194155CC3427 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9696EBC443AD6C2D4FD9 /* Event.swift */; };
+		B27A9F00317CEEFD0FBA4904 /* CalendarCollectionViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9D1C991D59C658B0841F /* CalendarCollectionViewLayoutAttributes.swift */; };
+		B27A9FE606A0D4E1D6D4FE03 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9C3B3DF063C98CCD38C0 /* SeparatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,13 +36,24 @@
 
 /* Begin PBXFileReference section */
 		A18E34241DC4941500E1CC7E /* Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A18E34271DC4941500E1CC7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A18E342E1DC4941500E1CC7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A18E34311DC4941500E1CC7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A18E34331DC4941500E1CC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A18E34381DC4941500E1CC7E /* UICollectionViewWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18E343C1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewWorkshopTests.swift; sourceTree = "<group>"; };
 		A18E343E1DC4941500E1CC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B27A90B489398F1D398BF0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UICollectionViewWorkshop/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		B27A90EF8204C58348400499 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		B27A92376AE36A5DCD52014B /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		B27A93B84173CA7F454B8791 /* EventsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsProvider.swift; sourceTree = "<group>"; };
+		B27A9696EBC443AD6C2D4FD9 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B27A990E3158C3FEB54D872E /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		B27A99A707B65C352F974DAB /* CarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		B27A9A680799497AD66BE04A /* CalendarCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewLayout.swift; sourceTree = "<group>"; };
+		B27A9BE30099A74A3FC68BC9 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		B27A9C3B3DF063C98CCD38C0 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		B27A9D1C991D59C658B0841F /* CalendarCollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		B27A9D4639130424FBEF5B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B27A9FD5A1D1C78914438920 /* HandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandView.swift; sourceTree = "<group>"; };
+		B27A9FDE20632E7C038D81EB /* CarouselCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +77,9 @@
 		A18E341B1DC4941500E1CC7E = {
 			isa = PBXGroup;
 			children = (
-				A18E34261DC4941500E1CC7E /* UICollectionViewWorkshop */,
 				A18E343B1DC4941500E1CC7E /* UICollectionViewWorkshopTests */,
 				A18E34251DC4941500E1CC7E /* Products */,
+				B27A959B9D5C1DA046EC4949 /* UICollectionViewWorkshop */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,17 +92,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A18E34261DC4941500E1CC7E /* UICollectionViewWorkshop */ = {
-			isa = PBXGroup;
-			children = (
-				A18E34271DC4941500E1CC7E /* AppDelegate.swift */,
-				A18E342E1DC4941500E1CC7E /* Assets.xcassets */,
-				A18E34301DC4941500E1CC7E /* LaunchScreen.storyboard */,
-				A18E34331DC4941500E1CC7E /* Info.plist */,
-			);
-			path = UICollectionViewWorkshop;
-			sourceTree = "<group>";
-		};
 		A18E343B1DC4941500E1CC7E /* UICollectionViewWorkshopTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +99,116 @@
 				A18E343E1DC4941500E1CC7E /* Info.plist */,
 			);
 			path = UICollectionViewWorkshopTests;
+			sourceTree = "<group>";
+		};
+		B27A904500286254959E893E /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				B27A990E3158C3FEB54D872E /* CalendarViewController.swift */,
+				B27A957BEFEACFE5FFB1F6EB /* Views */,
+				B27A92E4B062D3E9E55FAD46 /* Events */,
+				B27A9BC841A356D49E18079A /* Layout */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		B27A91313D16C0FB1EF6028E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B27A945E573EA929C4AFAACB /* LaunchScreen.storyboard */,
+				B27A9D4639130424FBEF5B0D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B27A92E4B062D3E9E55FAD46 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				B27A93B84173CA7F454B8791 /* EventsProvider.swift */,
+				B27A9696EBC443AD6C2D4FD9 /* Event.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		B27A94E66AF6D3941366D0DF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */,
+				B27A9A882C1B68BD882E3139 /* Carousel */,
+				B27A904500286254959E893E /* Calendar */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B27A957BEFEACFE5FFB1F6EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B27A9BE30099A74A3FC68BC9 /* CalendarCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B27A959B9D5C1DA046EC4949 /* UICollectionViewWorkshop */ = {
+			isa = PBXGroup;
+			children = (
+				B27A90EF8204C58348400499 /* Info.plist */,
+				B27A94E66AF6D3941366D0DF /* Classes */,
+				B27A91313D16C0FB1EF6028E /* Resources */,
+			);
+			path = UICollectionViewWorkshop;
+			sourceTree = "<group>";
+		};
+		B27A9A882C1B68BD882E3139 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				B27A9DC11F256A4A23E0155E /* Layout */,
+				B27A99A707B65C352F974DAB /* CarouselViewController.swift */,
+				B27A9D6FE4F3395C7FE646D3 /* View */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		B27A9BC841A356D49E18079A /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				B27A9A680799497AD66BE04A /* CalendarCollectionViewLayout.swift */,
+				B27A9D49A9550A1235E0E443 /* Attributes */,
+				B27A9F30B4BBDA69274AF2A6 /* Decoration Views */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		B27A9D49A9550A1235E0E443 /* Attributes */ = {
+			isa = PBXGroup;
+			children = (
+				B27A9D1C991D59C658B0841F /* CalendarCollectionViewLayoutAttributes.swift */,
+			);
+			path = Attributes;
+			sourceTree = "<group>";
+		};
+		B27A9D6FE4F3395C7FE646D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B27A92376AE36A5DCD52014B /* CarouselCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B27A9DC11F256A4A23E0155E /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				B27A9FDE20632E7C038D81EB /* CarouselCollectionViewLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		B27A9F30B4BBDA69274AF2A6 /* Decoration Views */ = {
+			isa = PBXGroup;
+			children = (
+				B27A9FD5A1D1C78914438920 /* HandView.swift */,
+				B27A9C3B3DF063C98CCD38C0 /* SeparatorView.swift */,
+			);
+			path = "Decoration Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,8 +294,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A18E34321DC4941500E1CC7E /* LaunchScreen.storyboard in Resources */,
-				A18E342F1DC4941500E1CC7E /* Assets.xcassets in Resources */,
+				B27A9C709E19C9D6FDC5F75D /* LaunchScreen.storyboard in Resources */,
+				B27A90BD33CC83B04BAC6C51 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +313,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A18E34281DC4941500E1CC7E /* AppDelegate.swift in Sources */,
+				B27A91D8D1755EA86E2B34B7 /* AppDelegate.swift in Sources */,
+				B27A9B86182FE01AE933D69F /* CarouselCollectionViewLayout.swift in Sources */,
+				B27A9471D78B0D046491ECD2 /* CarouselViewController.swift in Sources */,
+				B27A960692F47827D086110D /* CarouselCollectionViewCell.swift in Sources */,
+				B27A979FBDADA4775F918163 /* CalendarViewController.swift in Sources */,
+				B27A9112B1798EB62790E5F6 /* EventsProvider.swift in Sources */,
+				B27A9E0C86C8194155CC3427 /* Event.swift in Sources */,
+				B27A934967EDB19773236E05 /* CalendarCollectionViewCell.swift in Sources */,
+				B27A98C257602B59672AA891 /* CalendarCollectionViewLayout.swift in Sources */,
+				B27A9A3C7EEEDE593C2B5BB1 /* HandView.swift in Sources */,
+				B27A9FE606A0D4E1D6D4FE03 /* SeparatorView.swift in Sources */,
+				B27A9F00317CEEFD0FBA4904 /* CalendarCollectionViewLayoutAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,10 +347,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A18E34301DC4941500E1CC7E /* LaunchScreen.storyboard */ = {
+		B27A945E573EA929C4AFAACB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A18E34311DC4941500E1CC7E /* Base */,
+				B27A90B489398F1D398BF0FE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
