@@ -5,5 +5,5 @@
 import Foundation
 import UIKit
 
-class CalendarViewController: UICollectionViewController {
+final class CalendarViewController: UICollectionViewController {
 }
