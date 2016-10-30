@@ -10,6 +10,7 @@
 		A18E343D1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E343C1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift */; };
 		B27A90BD33CC83B04BAC6C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27A9D4639130424FBEF5B0D /* Assets.xcassets */; };
 		B27A9112B1798EB62790E5F6 /* EventsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A93B84173CA7F454B8791 /* EventsProvider.swift */; };
+		B27A919EAEB4C9437D22E33A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9AB41774A6B9A1929432 /* Colors.swift */; };
 		B27A91D8D1755EA86E2B34B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */; };
 		B27A934967EDB19773236E05 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9BE30099A74A3FC68BC9 /* CalendarCollectionViewCell.swift */; };
 		B27A9471D78B0D046491ECD2 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A99A707B65C352F974DAB /* CarouselViewController.swift */; };
@@ -47,6 +48,7 @@
 		B27A990E3158C3FEB54D872E /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		B27A99A707B65C352F974DAB /* CarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		B27A9A680799497AD66BE04A /* CalendarCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewLayout.swift; sourceTree = "<group>"; };
+		B27A9AB41774A6B9A1929432 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B27A9BE30099A74A3FC68BC9 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		B27A9C3B3DF063C98CCD38C0 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		B27A9D1C991D59C658B0841F /* CalendarCollectionViewLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewLayoutAttributes.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B27A92B060039DCDBC5A9B77 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				B27A9AB41774A6B9A1929432 /* Colors.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
 		B27A92E4B062D3E9E55FAD46 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 				B27A9A882C1B68BD882E3139 /* Carousel */,
 				B27A904500286254959E893E /* Calendar */,
 				B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */,
+				B27A92B060039DCDBC5A9B77 /* Generic */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -256,7 +267,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Mobile Academy";
 				TargetAttributes = {
 					A18E34231DC4941500E1CC7E = {
@@ -325,6 +336,7 @@
 				B27A9A3C7EEEDE593C2B5BB1 /* HandView.swift in Sources */,
 				B27A9FE606A0D4E1D6D4FE03 /* SeparatorView.swift in Sources */,
 				B27A9F00317CEEFD0FBA4904 /* CalendarCollectionViewLayoutAttributes.swift in Sources */,
+				B27A919EAEB4C9437D22E33A /* Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +388,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -425,6 +438,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
