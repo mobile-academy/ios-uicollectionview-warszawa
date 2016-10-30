@@ -104,10 +104,10 @@
 		B27A904500286254959E893E /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				B27A990E3158C3FEB54D872E /* CalendarViewController.swift */,
-				B27A957BEFEACFE5FFB1F6EB /* Views */,
 				B27A92E4B062D3E9E55FAD46 /* Events */,
 				B27A9BC841A356D49E18079A /* Layout */,
+				B27A957BEFEACFE5FFB1F6EB /* Views */,
+				B27A990E3158C3FEB54D872E /* CalendarViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -133,9 +133,9 @@
 		B27A94E66AF6D3941366D0DF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */,
 				B27A9A882C1B68BD882E3139 /* Carousel */,
 				B27A904500286254959E893E /* Calendar */,
+				B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -162,8 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				B27A9DC11F256A4A23E0155E /* Layout */,
-				B27A99A707B65C352F974DAB /* CarouselViewController.swift */,
 				B27A9D6FE4F3395C7FE646D3 /* View */,
+				B27A99A707B65C352F974DAB /* CarouselViewController.swift */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
@@ -522,6 +522,7 @@
 				A18E34431DC4941500E1CC7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A18E34441DC4941500E1CC7E /* Build configuration list for PBXNativeTarget "UICollectionViewWorkshopTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +531,7 @@
 				A18E34461DC4941500E1CC7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
