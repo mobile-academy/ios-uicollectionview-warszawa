@@ -21,12 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         modifyAppearance()
         
         if device.userInterfaceIdiom == .phone {
-            
+            window?.rootViewController = PhoneTabBarController()
         } else {
-
+            window?.rootViewController = UIViewController()
         }
-        
-        window?.rootViewController = UIViewController()
+
         window?.makeKeyAndVisible()
         return true
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8108615D69F8E3D59109A1A4 /* sp_41-10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81086B65DFF9868D55A64751 /* sp_41-10.jpg */; };
 		8108629D613652218EA53B64 /* sp_5-04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81086CDA2A0D76598EDDB76A /* sp_5-04.jpg */; };
+		810862AB13DA91A5999814D9 /* PhoneTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8108677D914A07C3C2A4EB8F /* PhoneTabBarController.swift */; };
 		81086316D0632FF8B1FE438B /* SpeakersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810864463F89AFE7A9522933 /* SpeakersDataSource.swift */; };
 		81086402730A51FB4B9839EB /* sp_3-03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81086D78801201C19ABFD604 /* sp_3-03.jpg */; };
 		8108645D2D5D026E6703D713 /* sp_46-11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81086646F2F226294738086B /* sp_46-11.jpg */; };
@@ -65,6 +66,7 @@
 		810864D640B92701C18D0D63 /* dudek.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dudek.jpg; sourceTree = "<group>"; };
 		81086583B0A95DD12203B2EA /* sp_2-07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_2-07.jpg"; sourceTree = "<group>"; };
 		81086646F2F226294738086B /* sp_46-11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_46-11.jpg"; sourceTree = "<group>"; };
+		8108677D914A07C3C2A4EB8F /* PhoneTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneTabBarController.swift; sourceTree = "<group>"; };
 		81086788BD2B000CBC49E418 /* SpeakerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerCollectionViewCell.swift; sourceTree = "<group>"; };
 		810868E316307F4780FCA806 /* SpeakerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerItem.swift; sourceTree = "<group>"; };
 		810869F5EFE28496D081624D /* sp_1-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_1-01.jpg"; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81086255C3B6A74DD37F42B2 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8108677D914A07C3C2A4EB8F /* PhoneTabBarController.swift */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
 		810862ACB214C3E88B1C097E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,11 +236,12 @@
 		B27A94E66AF6D3941366D0DF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */,
 				A13B61F11DC6797900604F01 /* Speakers */,
 				B27A9A882C1B68BD882E3139 /* Carousel */,
 				B27A904500286254959E893E /* Calendar */,
-				B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */,
 				B27A92B060039DCDBC5A9B77 /* Generic */,
+				81086255C3B6A74DD37F42B2 /* TabBarControllers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -441,6 +452,7 @@
 				8108646E52F65C3C4FD0A692 /* SpeakerItem.swift in Sources */,
 				81086316D0632FF8B1FE438B /* SpeakersDataSource.swift in Sources */,
 				81086C18FBBFEF76CCCDF9E0 /* SpeakerCollectionViewCell.swift in Sources */,
+				810862AB13DA91A5999814D9 /* PhoneTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
