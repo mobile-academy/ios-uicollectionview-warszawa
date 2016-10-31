@@ -8,18 +8,23 @@ import UIKit
 
 enum SpeakersLayout {
 	case vertical
+	case horizontal
 }
 
 extension UICollectionViewFlowLayout {
 
 	convenience init(layout: SpeakersLayout) {
         self.init()
-		if case .vertical = layout {
-			scrollDirection = .vertical
-			sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-		} else {
-			fatalError("Unknown layout")
+		switch layout {
+			case .vertical:
+				scrollDirection = .vertical
+				break
+			case .horizontal:
+				scrollDirection = .horizontal
+				minimumLineSpacing = 20
+				break
 		}
+		sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 	}
 
 }
