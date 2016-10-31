@@ -9,18 +9,6 @@
 import Foundation
 import UIKit
 
-/*
-    This is a view controller for managing collection view.
-    It takes `SpeakersDataSource` as a dependency to provide items for collection view.
-
-    Please follow the TODOs to complete this exercise.
-    (To list TODOs in AppCode use CMD+6 shortcut.)
-
-    HINT 1: Only this file need to be changed.
-    HINT 2: Implement `switchLayouts()` and `sizeForItemAt(indexPath)` methods. See TODOs.
- */
-
-
 final class SpeakersViewController: UIViewController {
 
 	let dataSource: SpeakersDataSource = SpeakersDataSource()
@@ -47,16 +35,23 @@ final class SpeakersViewController: UIViewController {
 		speakersCollectionView.delegate = self
 		dataSource.bind(with: speakersCollectionView)
 
-		// TODO 1. Create UIBarButtonItem for rightBarButtonItem for `switchLayouts`
+		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Switch", style: .plain, target: self, action: #selector(switchLayouts))
 	}
 
 	func switchLayouts() {
-		// TODO 2. You have to toggle between 2 flow layouts
-		// first: `.vertical` and second `.horizontal` (See _UICollectionViewFlowLayout+SpeakersLayout_ file for definitions)
-		//
-		// HINT 1. You can test `scrollDirection` property of flow layout to determine which layout should be applied.
-		// HINT 2. To apply layout call `setCollectionViewLayout(_, animated)` on collection view.
-		// HINT 3. You can enable paging (`pagingEnabled`) on collection view for horizontal layout
+		guard let fromLayout = speakersCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { fatalError("Wrong layout.") }
+
+		let isHorizontalLayout = fromLayout.scrollDirection == .horizontal
+
+		let toLayout: UICollectionViewLayout
+		if isHorizontalLayout {
+            toLayout = UICollectionViewFlowLayout(layout: .vertical)
+		} else {
+            toLayout = UICollectionViewFlowLayout(layout: .horizontal)
+		}
+
+		speakersCollectionView.isPagingEnabled = !isHorizontalLayout
+		speakersCollectionView.setCollectionViewLayout(toLayout, animated: true)
 	}
 
 	override func viewWillLayoutSubviews() {
@@ -71,16 +66,15 @@ final class SpeakersViewController: UIViewController {
 extension SpeakersViewController: UICollectionViewDelegateFlowLayout {
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		var size = CGSize.zero;
-		// TODO 3. You have to calculate different sizes for vertical and horizontal layout
-		// HINT 1: Vertical cell size remains the same.
-
-		// Uncomment following code and implement.
         guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else { fatalError("Wrong layout passed.") }
+
+		let size: CGSize
 		if case .horizontal = flowLayout.scrollDirection {
-
+            let height = collectionView.bounds.height - collectionView.contentInset.top - collectionView.contentInset.bottom
+			size = CGSize(width: collectionView.bounds.width, height: height)
 		} else {
-
+            let dimension = collectionView.bounds.width * 0.5
+			size = CGSize(width: dimension, height: dimension)
 		}
 
         let margin: CGFloat = 20
