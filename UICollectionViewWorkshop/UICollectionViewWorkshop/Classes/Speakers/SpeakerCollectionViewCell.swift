@@ -18,6 +18,10 @@ final class SpeakerCollectionViewCell: UICollectionViewCell {
 		addSubview(imageView)
 		clipsToBounds = true
 	}
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("Sadly, this is required...")
+    }
 
 	func configure(with speakerItem: SpeakerItem) {
 		imageView.image = speakerItem.image
