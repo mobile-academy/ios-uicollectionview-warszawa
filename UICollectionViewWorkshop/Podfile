@@ -1,0 +1,11 @@
+platform :ios, '9.0'
+
+target 'UICollectionViewWorkshop' do
+  use_frameworks!
+
+  target 'UICollectionViewWorkshopTests' do
+    inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
+  end
+end
