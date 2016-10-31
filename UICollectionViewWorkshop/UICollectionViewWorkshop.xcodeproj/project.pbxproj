@@ -28,6 +28,24 @@
 		81086C4FFF18C86FE399B2EE /* sp_2-07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81086583B0A95DD12203B2EA /* sp_2-07.jpg */; };
 		81086C83C156C1220DFC2A46 /* sp_1-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810869F5EFE28496D081624D /* sp_1-01.jpg */; };
 		A13B61F31DC679AB00604F01 /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B61F21DC679AB00604F01 /* SpeakersViewController.swift */; };
+		9411D1111DC7BFE30017D499 /* ItemCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D0FF1DC7BFE30017D499 /* ItemCreating.swift */; };
+		9411D1121DC7BFE30017D499 /* ItemDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1001DC7BFE30017D499 /* ItemDownloading.swift */; };
+		9411D1131DC7BFE30017D499 /* ItemUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1011DC7BFE30017D499 /* ItemUploading.swift */; };
+		9411D1141DC7BFE30017D499 /* StreamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1021DC7BFE30017D499 /* StreamItem.swift */; };
+		9411D1151DC7BFE30017D499 /* StreamItemCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1031DC7BFE30017D499 /* StreamItemCreator.swift */; };
+		9411D1171DC7BFE30017D499 /* StreamItemDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1051DC7BFE30017D499 /* StreamItemDownloader.swift */; };
+		9411D1191DC7BFE30017D499 /* StreamItemTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1071DC7BFE30017D499 /* StreamItemTransformer.swift */; };
+		9411D11B1DC7BFE30017D499 /* StreamItemUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1091DC7BFE30017D499 /* StreamItemUploader.swift */; };
+		9411D11D1DC7BFE30017D499 /* PhotoStreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D10B1DC7BFE30017D499 /* PhotoStreamCell.swift */; };
+		9411D11E1DC7BFE30017D499 /* PhotoStreamLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D10C1DC7BFE30017D499 /* PhotoStreamLayout.swift */; };
+		9411D11F1DC7BFE30017D499 /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D10D1DC7BFE30017D499 /* PhotoStreamViewController.swift */; };
+		9411D1211DC7BFE30017D499 /* StreamItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D10F1DC7BFE30017D499 /* StreamItemViewController.swift */; };
+		9411D1231DC7BFF00017D499 /* PhotoStreamViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D10E1DC7BFE30017D499 /* PhotoStreamViewControllerSpec.swift */; };
+		9411D1241DC7BFF40017D499 /* StreamItemViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1101DC7BFE30017D499 /* StreamItemViewControllerSpec.swift */; };
+		9411D1251DC7BFFC0017D499 /* StreamItemCreatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1041DC7BFE30017D499 /* StreamItemCreatorSpec.swift */; };
+		9411D1261DC7C0010017D499 /* StreamItemDownloaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1061DC7BFE30017D499 /* StreamItemDownloaderSpec.swift */; };
+		9411D1271DC7C0040017D499 /* StreamItemTransformerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1081DC7BFE30017D499 /* StreamItemTransformerSpec.swift */; };
+		9411D1281DC7C0080017D499 /* StreamItemUploaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D10A1DC7BFE30017D499 /* StreamItemUploaderSpec.swift */; };
 		A18E343D1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E343C1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift */; };
 		B27A90BD33CC83B04BAC6C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27A9D4639130424FBEF5B0D /* Assets.xcassets */; };
 		B27A9112B1798EB62790E5F6 /* EventsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A93B84173CA7F454B8791 /* EventsProvider.swift */; };
@@ -78,6 +96,24 @@
 		81086CDA2A0D76598EDDB76A /* sp_5-04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_5-04.jpg"; sourceTree = "<group>"; };
 		81086D78801201C19ABFD604 /* sp_3-03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_3-03.jpg"; sourceTree = "<group>"; };
 		A13B61F21DC679AB00604F01 /* SpeakersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
+		9411D0FF1DC7BFE30017D499 /* ItemCreating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCreating.swift; sourceTree = "<group>"; };
+		9411D1001DC7BFE30017D499 /* ItemDownloading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDownloading.swift; sourceTree = "<group>"; };
+		9411D1011DC7BFE30017D499 /* ItemUploading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemUploading.swift; sourceTree = "<group>"; };
+		9411D1021DC7BFE30017D499 /* StreamItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItem.swift; sourceTree = "<group>"; };
+		9411D1031DC7BFE30017D499 /* StreamItemCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemCreator.swift; sourceTree = "<group>"; };
+		9411D1041DC7BFE30017D499 /* StreamItemCreatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemCreatorSpec.swift; sourceTree = "<group>"; };
+		9411D1051DC7BFE30017D499 /* StreamItemDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloader.swift; sourceTree = "<group>"; };
+		9411D1061DC7BFE30017D499 /* StreamItemDownloaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloaderSpec.swift; sourceTree = "<group>"; };
+		9411D1071DC7BFE30017D499 /* StreamItemTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemTransformer.swift; sourceTree = "<group>"; };
+		9411D1081DC7BFE30017D499 /* StreamItemTransformerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemTransformerSpec.swift; sourceTree = "<group>"; };
+		9411D1091DC7BFE30017D499 /* StreamItemUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemUploader.swift; sourceTree = "<group>"; };
+		9411D10A1DC7BFE30017D499 /* StreamItemUploaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemUploaderSpec.swift; sourceTree = "<group>"; };
+		9411D10B1DC7BFE30017D499 /* PhotoStreamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamCell.swift; sourceTree = "<group>"; };
+		9411D10C1DC7BFE30017D499 /* PhotoStreamLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamLayout.swift; sourceTree = "<group>"; };
+		9411D10D1DC7BFE30017D499 /* PhotoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewController.swift; sourceTree = "<group>"; };
+		9411D10E1DC7BFE30017D499 /* PhotoStreamViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewControllerSpec.swift; sourceTree = "<group>"; };
+		9411D10F1DC7BFE30017D499 /* StreamItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemViewController.swift; sourceTree = "<group>"; };
+		9411D1101DC7BFE30017D499 /* StreamItemViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemViewControllerSpec.swift; sourceTree = "<group>"; };
 		A18E34241DC4941500E1CC7E /* Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18E34381DC4941500E1CC7E /* UICollectionViewWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18E343C1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewWorkshopTests.swift; sourceTree = "<group>"; };
@@ -169,6 +205,47 @@
 			path = Speakers;
 			sourceTree = "<group>";
 		};
+		9411D0FC1DC7BFE30017D499 /* PhotoStream */ = {
+			isa = PBXGroup;
+			children = (
+				9411D0FD1DC7BFE30017D499 /* Model */,
+				9411D10B1DC7BFE30017D499 /* PhotoStreamCell.swift */,
+				9411D10C1DC7BFE30017D499 /* PhotoStreamLayout.swift */,
+				9411D10D1DC7BFE30017D499 /* PhotoStreamViewController.swift */,
+				9411D10E1DC7BFE30017D499 /* PhotoStreamViewControllerSpec.swift */,
+				9411D10F1DC7BFE30017D499 /* StreamItemViewController.swift */,
+				9411D1101DC7BFE30017D499 /* StreamItemViewControllerSpec.swift */,
+			);
+			path = PhotoStream;
+			sourceTree = "<group>";
+		};
+		9411D0FD1DC7BFE30017D499 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9411D0FE1DC7BFE30017D499 /* Protocols */,
+				9411D1021DC7BFE30017D499 /* StreamItem.swift */,
+				9411D1031DC7BFE30017D499 /* StreamItemCreator.swift */,
+				9411D1041DC7BFE30017D499 /* StreamItemCreatorSpec.swift */,
+				9411D1051DC7BFE30017D499 /* StreamItemDownloader.swift */,
+				9411D1061DC7BFE30017D499 /* StreamItemDownloaderSpec.swift */,
+				9411D1071DC7BFE30017D499 /* StreamItemTransformer.swift */,
+				9411D1081DC7BFE30017D499 /* StreamItemTransformerSpec.swift */,
+				9411D1091DC7BFE30017D499 /* StreamItemUploader.swift */,
+				9411D10A1DC7BFE30017D499 /* StreamItemUploaderSpec.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9411D0FE1DC7BFE30017D499 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9411D0FF1DC7BFE30017D499 /* ItemCreating.swift */,
+				9411D1001DC7BFE30017D499 /* ItemDownloading.swift */,
+				9411D1011DC7BFE30017D499 /* ItemUploading.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		A18E341B1DC4941500E1CC7E = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +315,7 @@
 			children = (
 				B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */,
 				A13B61F11DC6797900604F01 /* Speakers */,
+				9411D0FC1DC7BFE30017D499 /* PhotoStream */,
 				B27A9A882C1B68BD882E3139 /* Carousel */,
 				B27A904500286254959E893E /* Calendar */,
 				B27A92B060039DCDBC5A9B77 /* Generic */,
@@ -435,15 +513,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9411D1131DC7BFE30017D499 /* ItemUploading.swift in Sources */,
+				9411D1141DC7BFE30017D499 /* StreamItem.swift in Sources */,
 				B27A91D8D1755EA86E2B34B7 /* AppDelegate.swift in Sources */,
+				9411D11E1DC7BFE30017D499 /* PhotoStreamLayout.swift in Sources */,
 				B27A9B86182FE01AE933D69F /* CarouselCollectionViewLayout.swift in Sources */,
+				9411D1211DC7BFE30017D499 /* StreamItemViewController.swift in Sources */,
 				B27A9471D78B0D046491ECD2 /* CarouselViewController.swift in Sources */,
+				9411D11D1DC7BFE30017D499 /* PhotoStreamCell.swift in Sources */,
 				B27A960692F47827D086110D /* CarouselCollectionViewCell.swift in Sources */,
 				B27A979FBDADA4775F918163 /* CalendarViewController.swift in Sources */,
 				B27A9112B1798EB62790E5F6 /* EventsProvider.swift in Sources */,
 				B27A9E0C86C8194155CC3427 /* Event.swift in Sources */,
+				9411D1191DC7BFE30017D499 /* StreamItemTransformer.swift in Sources */,
+				9411D1151DC7BFE30017D499 /* StreamItemCreator.swift in Sources */,
+				9411D1111DC7BFE30017D499 /* ItemCreating.swift in Sources */,
+				9411D1171DC7BFE30017D499 /* StreamItemDownloader.swift in Sources */,
+				9411D1121DC7BFE30017D499 /* ItemDownloading.swift in Sources */,
 				B27A934967EDB19773236E05 /* CalendarCollectionViewCell.swift in Sources */,
+				9411D11F1DC7BFE30017D499 /* PhotoStreamViewController.swift in Sources */,
 				B27A98C257602B59672AA891 /* CalendarCollectionViewLayout.swift in Sources */,
+				9411D11B1DC7BFE30017D499 /* StreamItemUploader.swift in Sources */,
 				B27A9A3C7EEEDE593C2B5BB1 /* HandView.swift in Sources */,
 				B27A9FE606A0D4E1D6D4FE03 /* SeparatorView.swift in Sources */,
 				B27A9F00317CEEFD0FBA4904 /* CalendarCollectionViewLayoutAttributes.swift in Sources */,
@@ -460,6 +550,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9411D1281DC7C0080017D499 /* StreamItemUploaderSpec.swift in Sources */,
+				9411D1251DC7BFFC0017D499 /* StreamItemCreatorSpec.swift in Sources */,
+				9411D1271DC7C0040017D499 /* StreamItemTransformerSpec.swift in Sources */,
+				9411D1231DC7BFF00017D499 /* PhotoStreamViewControllerSpec.swift in Sources */,
+				9411D1241DC7BFF40017D499 /* StreamItemViewControllerSpec.swift in Sources */,
+				9411D1261DC7C0010017D499 /* StreamItemDownloaderSpec.swift in Sources */,
 				A18E343D1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
