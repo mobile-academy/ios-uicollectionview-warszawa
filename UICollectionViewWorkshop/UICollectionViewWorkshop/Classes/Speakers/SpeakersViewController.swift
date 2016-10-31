@@ -9,21 +9,12 @@
 import Foundation
 import UIKit
 
-/*
-    This is a view controller for managing collection view.
-    It takes `SpeakersDataSource` as a dependency to provide items for collection view.
-
-    Please follow the TODOs to complete this exercise.
-    (To list TODOs in AppCode use CMD+6 shortcut.)
-
-    HINT 1: This controller should be a collection view delegate.
-    HINT 2: `SpeakersDataSource` should be a collection view data source.
- */
-
-
 final class SpeakersViewController: UIViewController {
 
 	let dataSource: SpeakersDataSource = SpeakersDataSource()
+	private var speakersCollectionView: UICollectionView {
+		return view as! UICollectionView
+	}
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -32,25 +23,33 @@ final class SpeakersViewController: UIViewController {
     }
 
 	override func loadView() {
-		// Remove this after setting self.view
-		super.loadView()
-
-		// TODO 1. You should create a UICollectionView with UICollectionViewFlowLayout here.
-		// This is a place where you can set collection view's delegate and data source.
-
-		// HINT 1: Remember about special delegate protocol for UICollectionViewFlowLayout.
-		// HINT 2: For setting data source please see `bind(with collectionView)` method in `SpeakersDataSource` class (which should be called in viewDidLoad).
+		let layout = UICollectionViewFlowLayout(layout: .vertical)
+		let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+		view = collectionView
 	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = UIColor.white
+
+		speakersCollectionView.delegate = self
+		dataSource.bind(with: speakersCollectionView)
 	}
+
+	override func viewWillLayoutSubviews() {
+		super.viewWillLayoutSubviews()
+        DispatchQueue.once {
+            self.speakersCollectionView.contentInset = UIEdgeInsetsMake(topLayoutGuide.length, 0, bottomLayoutGuide.length, 0)
+        }
+	}
+
 }
 
-extension SpeakersViewController: UICollectionViewDelegate /* FlowLayout */ {
+extension SpeakersViewController: UICollectionViewDelegateFlowLayout {
 
-	// TODO 4. You should override `collectionView(_, layout, sizeForItemAt)` method to provide cell size.
-	// HINT: Remember about special delegate protocol for UICollectionViewFlowLayout.
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		let dimension = collectionView.frame.width * 0.5 - 20
+		return CGSize(width: dimension, height: dimension)
+	}
 
 }

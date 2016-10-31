@@ -6,23 +6,30 @@
 import Foundation
 import UIKit
 
-final class SpeakersDataSource {
-	private(set) lazy var speakerItems: [SpeakerItem] = self.loadSpeakerItems()
-	private let cellIdentifier = "SpeakersCellIdentifier"
-	private let cellClass = SpeakerCollectionViewCell.self
+final class SpeakersDataSource: NSObject {
+	fileprivate(set) lazy var speakerItems: [SpeakerItem] = self.loadSpeakerItems()
+    fileprivate let cellIdentifier = "SpeakersCellIdentifier"
+	fileprivate let cellClass = SpeakerCollectionViewCell.self
 
 	func bind(with collectionView: UICollectionView) {
-		// TODO 2. To bind collection view with data source, you have to do the following:
-		// - Register cell class for identifier.
-		// - Set itself as a collection view data source. (HINT: Remember to add protocol in class header)
+		collectionView.register(cellClass, forCellWithReuseIdentifier: cellIdentifier)
+		collectionView.dataSource = self
 	}
 }
 
-//extension SpeakersDataSource: UICollectionViewDataSource {
-	// TODO 3. There are 2 required methods of UICollectionViewDataSource you need to implement
-	// - `-collectionView(_, numberOfItemsInSection)`
-	// - `-collectionView(_, cellForItemAt)` (HINT: The cell that is returned must be retrieved from a call to `-dequeueReusableCell(withReuseIdentifier,for)`
-//}
+extension SpeakersDataSource: UICollectionViewDataSource {
+
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return speakerItems.count
+	}
+
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! SpeakerCollectionViewCell
+		let speakerItem = speakerItems[indexPath.item]
+		cell.configure(with: speakerItem)
+		return cell
+	}
+}
 
 extension SpeakersDataSource {
 	fileprivate func loadSpeakerItems() -> [SpeakerItem] {

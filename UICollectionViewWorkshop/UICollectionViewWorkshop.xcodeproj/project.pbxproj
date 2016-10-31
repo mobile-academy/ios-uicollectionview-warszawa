@@ -16,11 +16,13 @@
 		8108646E52F65C3C4FD0A692 /* SpeakerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810868E316307F4780FCA806 /* SpeakerItem.swift */; };
 		8108653077E468518E99B404 /* sp_4-08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810863BDC91D25D30E50DA19 /* sp_4-08.jpg */; };
 		81086553C53BC93AA0E55501 /* sp_5-09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810863708BE9FFAC453B9985 /* sp_5-09.jpg */; };
+		81086578682887E49077B6CA /* UICollectionViewLayout+SpeakersLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81086C651A77D8469D7FBFA1 /* UICollectionViewLayout+SpeakersLayout.swift */; };
 		81086622E11D8483EC745C58 /* sp_1-06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81086434B509882DD1BC245B /* sp_1-06.jpg */; };
 		8108667820DF1DEA7C8A2CF5 /* sp_45-12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81086C97552C34BCA7FDB80D /* sp_45-12.jpg */; };
 		81086766654C46F6AB119787 /* zubala.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810863F8BF427B75BD2144EF /* zubala.jpg */; };
 		810869B9F8B399E8AE129EB7 /* dudek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810864D640B92701C18D0D63 /* dudek.jpg */; };
 		810869E8FAEF20AF7B76FD24 /* oczko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81086461AC00113B6C3231B6 /* oczko.jpg */; };
+		81086A837016281A43B11EF6 /* DispatchQueue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810861029B1C2C84C0AE38C1 /* DispatchQueue+Extensions.swift */; };
 		81086AF16031EF998403C8C9 /* sp_2-02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81086CBA277C5E97BBE80397 /* sp_2-02.jpg */; };
 		81086B271F33FE89182609F6 /* sp_6-05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81086A59CF0D2F5816B53DDA /* sp_6-05.jpg */; };
 		81086B61817D4106D844EB23 /* wijas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81086A907E330FD29E2F1E5B /* wijas.jpg */; };
@@ -106,6 +108,7 @@
 		1DA001431A91D27ECA77B93F /* Pods-UICollectionViewWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionViewWorkshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UICollectionViewWorkshop/Pods-UICollectionViewWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
 		390A7391C3EA2FAD3B79C52B /* Pods_UICollectionViewWorkshopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UICollectionViewWorkshopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F98CC7E0A1261DA18A0D39 /* Pods-UICollectionViewWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionViewWorkshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-UICollectionViewWorkshop/Pods-UICollectionViewWorkshop.release.xcconfig"; sourceTree = "<group>"; };
+		810861029B1C2C84C0AE38C1 /* DispatchQueue+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extensions.swift"; sourceTree = "<group>"; };
 		810863708BE9FFAC453B9985 /* sp_5-09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_5-09.jpg"; sourceTree = "<group>"; };
 		810863BDC91D25D30E50DA19 /* sp_4-08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_4-08.jpg"; sourceTree = "<group>"; };
 		810863F8BF427B75BD2144EF /* zubala.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zubala.jpg; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 		81086A59CF0D2F5816B53DDA /* sp_6-05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_6-05.jpg"; sourceTree = "<group>"; };
 		81086A907E330FD29E2F1E5B /* wijas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wijas.jpg; sourceTree = "<group>"; };
 		81086B65DFF9868D55A64751 /* sp_41-10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_41-10.jpg"; sourceTree = "<group>"; };
+		81086C651A77D8469D7FBFA1 /* UICollectionViewLayout+SpeakersLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+SpeakersLayout.swift"; sourceTree = "<group>"; };
 		81086C97552C34BCA7FDB80D /* sp_45-12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_45-12.jpg"; sourceTree = "<group>"; };
 		81086CBA277C5E97BBE80397 /* sp_2-02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_2-02.jpg"; sourceTree = "<group>"; };
 		81086CDA2A0D76598EDDB76A /* sp_5-04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sp_5-04.jpg"; sourceTree = "<group>"; };
@@ -357,6 +361,7 @@
 				810862ACB214C3E88B1C097E /* Resources */,
 				81086C5FEB3A5A004696E4BC /* DataSource */,
 				81086788BD2B000CBC49E418 /* SpeakerCollectionViewCell.swift */,
+				81086C651A77D8469D7FBFA1 /* UICollectionViewLayout+SpeakersLayout.swift */,
 			);
 			path = Speakers;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				B27A9AB41774A6B9A1929432 /* Colors.swift */,
+				810861029B1C2C84C0AE38C1 /* DispatchQueue+Extensions.swift */,
 			);
 			path = Generic;
 			sourceTree = "<group>";
@@ -789,6 +795,9 @@
 				8108646E52F65C3C4FD0A692 /* SpeakerItem.swift in Sources */,
 				81086316D0632FF8B1FE438B /* SpeakersDataSource.swift in Sources */,
 				81086C18FBBFEF76CCCDF9E0 /* SpeakerCollectionViewCell.swift in Sources */,
+				810862AB13DA91A5999814D9 /* PhoneTabBarController.swift in Sources */,
+				81086578682887E49077B6CA /* UICollectionViewLayout+SpeakersLayout.swift in Sources */,
+				81086A837016281A43B11EF6 /* DispatchQueue+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
