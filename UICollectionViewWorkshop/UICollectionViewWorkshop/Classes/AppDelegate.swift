@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         modifyAppearance()
         
         if device.userInterfaceIdiom == .phone {
-            window?.rootViewController = PhoneTabBarController()
+            window?.rootViewController = UINavigationController(rootViewController: PhoneTabBarController())
         } else {
             window?.rootViewController = UIViewController()
         }
