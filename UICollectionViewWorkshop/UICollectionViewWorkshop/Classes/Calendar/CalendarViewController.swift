@@ -15,7 +15,7 @@ final class CalendarViewController: UICollectionViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("Sadly, this is required...")
+        super.init(coder: aDecoder)
     }
     
 }
