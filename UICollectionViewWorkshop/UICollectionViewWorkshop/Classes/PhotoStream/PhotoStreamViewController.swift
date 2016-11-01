@@ -6,8 +6,6 @@ import UIKit
 
 class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegate {
 
-    //MARK: Properties
-
     var parseAdapter: ParseAdapting
     var downloader: ItemDownloading
     var creator: ItemCreating
@@ -18,8 +16,6 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
     var refreshControl: UIRefreshControl
 
     var streamItems = [StreamItem]()
-
-    //MARK: Object Life Cycle
 
     required init?(coder: NSCoder) {
         parseAdapter = DefaultParseAdapter()
@@ -35,8 +31,6 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         presenter.viewController = self
         creator.delegate = self
     }
-
-    //MARK: View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +70,6 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         let indexPath = collectionView?.indexPath(for: cell) {
             itemViewController.streamItem = streamItems[indexPath.item]
         }
-
     }
 
     //MARK: ItemCreatingDelegate

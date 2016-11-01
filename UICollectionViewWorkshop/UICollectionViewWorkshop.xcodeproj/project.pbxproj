@@ -48,7 +48,6 @@
 		9411D1331DC7C4260017D499 /* AlertActionCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D12A1DC7C4260017D499 /* AlertActionCreating.swift */; };
 		9411D1351DC7C4260017D499 /* ImageManipulating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D12C1DC7C4260017D499 /* ImageManipulating.swift */; };
 		9411D1361DC7C4260017D499 /* ImagePickerCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D12D1DC7C4260017D499 /* ImagePickerCreating.swift */; };
-		9411D1371DC7C4260017D499 /* ImageResizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9411D12F1DC7C4260017D499 /* ImageResizer.m */; };
 		9411D1381DC7C4260017D499 /* MediaResourceTypeAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1301DC7C4260017D499 /* MediaResourceTypeAvailability.swift */; };
 		9411D1391DC7C4260017D499 /* ParseAdapting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1311DC7C4260017D499 /* ParseAdapting.swift */; };
 		9411D13A1DC7C4260017D499 /* ViewControllerPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1321DC7C4260017D499 /* ViewControllerPresenting.swift */; };
@@ -148,8 +147,6 @@
 		9411D12A1DC7C4260017D499 /* AlertActionCreating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionCreating.swift; sourceTree = "<group>"; };
 		9411D12C1DC7C4260017D499 /* ImageManipulating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManipulating.swift; sourceTree = "<group>"; };
 		9411D12D1DC7C4260017D499 /* ImagePickerCreating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerCreating.swift; sourceTree = "<group>"; };
-		9411D12E1DC7C4260017D499 /* ImageResizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageResizer.h; sourceTree = "<group>"; };
-		9411D12F1DC7C4260017D499 /* ImageResizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageResizer.m; sourceTree = "<group>"; };
 		9411D1301DC7C4260017D499 /* MediaResourceTypeAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaResourceTypeAvailability.swift; sourceTree = "<group>"; };
 		9411D1311DC7C4260017D499 /* ParseAdapting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseAdapting.swift; sourceTree = "<group>"; };
 		9411D1321DC7C4260017D499 /* ViewControllerPresenting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenting.swift; sourceTree = "<group>"; };
@@ -309,8 +306,6 @@
 				9411D12A1DC7C4260017D499 /* AlertActionCreating.swift */,
 				9411D12C1DC7C4260017D499 /* ImageManipulating.swift */,
 				9411D12D1DC7C4260017D499 /* ImagePickerCreating.swift */,
-				9411D12E1DC7C4260017D499 /* ImageResizer.h */,
-				9411D12F1DC7C4260017D499 /* ImageResizer.m */,
 				9411D1301DC7C4260017D499 /* MediaResourceTypeAvailability.swift */,
 				9411D1311DC7C4260017D499 /* ParseAdapting.swift */,
 				9411D1321DC7C4260017D499 /* ViewControllerPresenting.swift */,
@@ -756,7 +751,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9411D1371DC7C4260017D499 /* ImageResizer.m in Sources */,
 				9411D1131DC7BFE30017D499 /* ItemUploading.swift in Sources */,
 				9411D1141DC7BFE30017D499 /* StreamItem.swift in Sources */,
 				B27A91D8D1755EA86E2B34B7 /* AppDelegate.swift in Sources */,

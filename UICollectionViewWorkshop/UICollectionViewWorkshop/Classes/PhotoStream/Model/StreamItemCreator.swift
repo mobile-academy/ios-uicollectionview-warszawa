@@ -30,12 +30,6 @@ class StreamItemCreator: NSObject, ItemCreating, UIImagePickerControllerDelegate
     //MARK: ItemCreating
 
     func createStreamItem() {
-        //TODO: Task 2
-        //TODO: check the available source types from `resourceAvailability`
-        //TODO: if it's empty, inform delegate about error
-        //TODO: if it contains single element, present `UIImagePickerController`
-        //TODO: if it contains more then one element, present `UIAlertControler` so user has to pick source
-
         let sources = resourceAvailability.availableSources()
         switch (sources.count) {
             case 0:
@@ -43,7 +37,7 @@ class StreamItemCreator: NSObject, ItemCreating, UIImagePickerControllerDelegate
             case 1:
                 presentPickerWithResourceType(sourceType: sources.first!)
             default:
-                presentSourcesActionSheet() //TODO fixe me
+                presentSourcesActionSheet(sources: sources)
         }
     }
 
@@ -97,9 +91,9 @@ class StreamItemCreator: NSObject, ItemCreating, UIImagePickerControllerDelegate
         return alertController
     }
 
-    private func presentSourcesActionSheet() {
+    private func presentSourcesActionSheet(sources: [UIImagePickerControllerSourceType]) {
         let alertController = UIAlertController(title: "Add new Item to the stream", message: nil, preferredStyle: .actionSheet)
-        addImagePickerActionsToAlertController(alertController: alertController, forSources: resourceAvailability.availableSources())
+        addImagePickerActionsToAlertController(alertController: alertController, forSources: sources)
         let cancelAction = actionFactory.createActionWithTitle(title: "Cancel", style: .cancel) {
             action in
         }
