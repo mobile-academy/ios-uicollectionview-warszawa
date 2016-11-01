@@ -12,11 +12,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         modifyAppearance()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
         return true
     }
 
+}
+extension AppDelegate {
+    fileprivate var storyboardName: String {
+        if device.userInterfaceIdiom == .phone {
+            return "Main-Phone"
+        } else {
+            return "Main-Pad"
+        }
+    }
+    
+    fileprivate var rootViewController: UIViewController? {
+        return UIStoryboard(name: storyboardName, bundle: nil).instantiateInitialViewController()
+    }
 
-    func modifyAppearance() {
+    fileprivate func modifyAppearance() {
         let workshopBackgroundColor = UIColor.barsBackgroundTint
         let tintColor = UIColor.text
 

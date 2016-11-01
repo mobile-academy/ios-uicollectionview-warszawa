@@ -65,7 +65,8 @@
 		9411D1741DC86D1D0017D499 /* UITableViewFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1661DC86D1D0017D499 /* UITableViewFake.swift */; };
 		9411D1751DC86D1D0017D499 /* ViewControllerPresenterFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1671DC86D1D0017D499 /* ViewControllerPresenterFake.swift */; };
 		9411D1761DC86D1D0017D499 /* TestStreamItemCreatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1691DC86D1D0017D499 /* TestStreamItemCreatorDelegate.swift */; };
-		94E77BCC1DC87653003A7E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E77BC81DC87653003A7E49 /* Main.storyboard */; };
+		948F322E1DC8CFC700A322DF /* Main-Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948F322C1DC8CFC700A322DF /* Main-Pad.storyboard */; };
+		94E77BCC1DC87653003A7E49 /* Main-Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E77BC81DC87653003A7E49 /* Main-Phone.storyboard */; };
 		94E77BCD1DC87653003A7E49 /* PhotoStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E77BCA1DC87653003A7E49 /* PhotoStream.storyboard */; };
 		94E77BD01DC877CA003A7E49 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E77BCE1DC877CA003A7E49 /* Calendar.storyboard */; };
 		94E77BD31DC877EE003A7E49 /* Speakers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E77BD11DC877EE003A7E49 /* Speakers.storyboard */; };
@@ -162,7 +163,8 @@
 		9411D1661DC86D1D0017D499 /* UITableViewFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewFake.swift; sourceTree = "<group>"; };
 		9411D1671DC86D1D0017D499 /* ViewControllerPresenterFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenterFake.swift; sourceTree = "<group>"; };
 		9411D1691DC86D1D0017D499 /* TestStreamItemCreatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestStreamItemCreatorDelegate.swift; sourceTree = "<group>"; };
-		94E77BC91DC87653003A7E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UICollectionViewWorkshop/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		948F322D1DC8CFC700A322DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "UICollectionViewWorkshop/Base.lproj/Main-Pad.storyboard"; sourceTree = SOURCE_ROOT; };
+		94E77BC91DC87653003A7E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "UICollectionViewWorkshop/Base.lproj/Main-Phone.storyboard"; sourceTree = SOURCE_ROOT; };
 		94E77BCB1DC87653003A7E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UICollectionViewWorkshop/Base.lproj/PhotoStream.storyboard; sourceTree = SOURCE_ROOT; };
 		94E77BCF1DC877CA003A7E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UICollectionViewWorkshop/Base.lproj/Calendar.storyboard; sourceTree = SOURCE_ROOT; };
 		94E77BD21DC877EE003A7E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UICollectionViewWorkshop/Base.lproj/Speakers.storyboard; sourceTree = SOURCE_ROOT; };
@@ -393,7 +395,8 @@
 		B27A91313D16C0FB1EF6028E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				94E77BC81DC87653003A7E49 /* Main.storyboard */,
+				948F322C1DC8CFC700A322DF /* Main-Pad.storyboard */,
+				94E77BC81DC87653003A7E49 /* Main-Phone.storyboard */,
 				94E77BCA1DC87653003A7E49 /* PhotoStream.storyboard */,
 				B27A945E573EA929C4AFAACB /* LaunchScreen.storyboard */,
 				94E77BCE1DC877CA003A7E49 /* Calendar.storyboard */,
@@ -619,11 +622,12 @@
 				8108653077E468518E99B404 /* sp_4-08.jpg in Resources */,
 				94E77BD31DC877EE003A7E49 /* Speakers.storyboard in Resources */,
 				8108629D613652218EA53B64 /* sp_5-04.jpg in Resources */,
+				948F322E1DC8CFC700A322DF /* Main-Pad.storyboard in Resources */,
 				81086553C53BC93AA0E55501 /* sp_5-09.jpg in Resources */,
 				81086B271F33FE89182609F6 /* sp_6-05.jpg in Resources */,
 				8108615D69F8E3D59109A1A4 /* sp_41-10.jpg in Resources */,
 				8108667820DF1DEA7C8A2CF5 /* sp_45-12.jpg in Resources */,
-				94E77BCC1DC87653003A7E49 /* Main.storyboard in Resources */,
+				94E77BCC1DC87653003A7E49 /* Main-Phone.storyboard in Resources */,
 				8108645D2D5D026E6703D713 /* sp_46-11.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -812,12 +816,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		94E77BC81DC87653003A7E49 /* Main.storyboard */ = {
+		948F322C1DC8CFC700A322DF /* Main-Pad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				948F322D1DC8CFC700A322DF /* Base */,
+			);
+			name = "Main-Pad.storyboard";
+			sourceTree = "<group>";
+		};
+		94E77BC81DC87653003A7E49 /* Main-Phone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				94E77BC91DC87653003A7E49 /* Base */,
 			);
-			name = Main.storyboard;
+			name = "Main-Phone.storyboard";
 			sourceTree = "<group>";
 		};
 		94E77BCA1DC87653003A7E49 /* PhotoStream.storyboard */ = {
