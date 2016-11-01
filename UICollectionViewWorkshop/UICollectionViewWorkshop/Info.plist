@@ -26,6 +26,10 @@
 	<string>Add photo to stream</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main-Phone</string>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>Main-Pad</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
