@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -59,7 +58,6 @@
                                 <size key="customSize" width="100" height="100"/>
                                 <connections>
                                     <outlet property="imageView" destination="aj0-AW-ggU" id="ktZ-zm-TcV"/>
-                                    <segue destination="lhx-e1-8ze" kind="showDetail" identifier="StreamItemPreviewSegue" id="qAt-t3-mRw"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -83,71 +81,33 @@
             <point key="canvasLocation" x="830" y="-412"/>
         </scene>
         <!--Stream Item View Controller-->
-        <scene sceneID="IDH-d7-nCg">
+        <scene sceneID="nB1-LA-UJe">
             <objects>
-                <viewController storyboardIdentifier="StreamItemPreview" id="lhx-e1-8ze" customClass="StreamItemViewController" customModule="UICollectionViewWorkshop" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HmY-MH-O6t"/>
-                        <viewControllerLayoutGuide type="bottom" id="QNc-WO-dYj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EwG-jv-gq5">
+                <collectionViewController storyboardIdentifier="StreamItemPreview" id="XPi-fI-KnM" customClass="StreamItemViewController" customModule="UICollectionViewWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="s6m-6D-YCT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBZ-eV-hN5">
-                                <rect key="frame" x="16" y="20" width="39" height="30"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelBarButtonPressedWithSender:" destination="lhx-e1-8ze" eventType="touchUpInside" id="n5l-EZ-rcT"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhotoStream" translatesAutoresizingMaskIntoConstraints="NO" id="dMK-5e-Bct">
-                                <rect key="frame" x="175.5" y="324.5" width="24" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="520" id="dmN-2y-FJT"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="dmN-2y-FJT"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="OBZ-eV-hN5" secondAttribute="leading" id="348-9J-xFz"/>
-                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerY" secondItem="EwG-jv-gq5" secondAttribute="centerY" id="4ll-ZA-6o7"/>
-                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerY" secondItem="EwG-jv-gq5" secondAttribute="centerY" id="8EK-xm-vKJ"/>
-                            <constraint firstItem="OBZ-eV-hN5" firstAttribute="top" secondItem="HmY-MH-O6t" secondAttribute="bottom" id="GP3-ha-ddJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dMK-5e-Bct" secondAttribute="trailing" constant="20" id="MGl-kt-zen"/>
-                            <constraint firstItem="dMK-5e-Bct" firstAttribute="width" secondItem="EwG-jv-gq5" secondAttribute="width" id="NnL-0j-i2N"/>
-                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerX" secondItem="EwG-jv-gq5" secondAttribute="centerX" id="WlN-U1-XGS"/>
-                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerX" secondItem="EwG-jv-gq5" secondAttribute="centerX" id="aWg-mp-cZz"/>
-                            <constraint firstItem="dMK-5e-Bct" firstAttribute="leading" secondItem="EwG-jv-gq5" secondAttribute="leadingMargin" constant="20" id="dP9-yf-nAa"/>
-                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerY" secondItem="EwG-jv-gq5" secondAttribute="centerY" id="vmc-Be-QyB"/>
-                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerX" secondItem="EwG-jv-gq5" secondAttribute="centerX" id="xcu-Mw-deE"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="4ll-ZA-6o7"/>
-                                <exclude reference="MGl-kt-zen"/>
-                                <exclude reference="NnL-0j-i2N"/>
-                                <exclude reference="WlN-U1-XGS"/>
-                                <exclude reference="dP9-yf-nAa"/>
-                                <exclude reference="vmc-Be-QyB"/>
-                                <exclude reference="xcu-Mw-deE"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="imageView" destination="dMK-5e-Bct" id="UhB-rU-HXI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VF5-t9-7KP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="6fl-m1-QmM" customClass="StreamItemPreviewLayout" customModule="UICollectionViewWorkshop" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RLd-Ew-wzd">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="XPi-fI-KnM" id="gwr-T3-CmH"/>
+                            <outlet property="delegate" destination="XPi-fI-KnM" id="V9L-aI-dHJ"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oB-zL-Irt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1591" y="-411"/>
+            <point key="canvasLocation" x="1353" y="-411"/>
         </scene>
     </scenes>
     <resources>

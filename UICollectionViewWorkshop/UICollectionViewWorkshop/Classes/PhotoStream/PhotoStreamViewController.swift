@@ -53,6 +53,12 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         return cell
     }
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let viewController = createStreamItemViewController() {
+            viewController.streamItem = streamItems[indexPath.item]
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 
     //MARK: Actions
 
@@ -62,14 +68,6 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
 
     func didPullToRefresh(refreshControl: UIRefreshControl) {
         downloadStreamItems()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let itemViewController = segue.destination as? StreamItemViewController,
-        let cell = sender as? UICollectionViewCell,
-        let indexPath = collectionView?.indexPath(for: cell) {
-            itemViewController.streamItem = streamItems[indexPath.item]
-        }
     }
 
     //MARK: ItemCreatingDelegate
@@ -90,6 +88,11 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
     }
 
     //MARK: Private methods
+
+    private func createStreamItemViewController() -> StreamItemViewController? {
+        let viewController = UIStoryboard(name: "PhotoStream", bundle: nil).instantiateViewController(withIdentifier: "StreamItemPreview")
+        return viewController as? StreamItemViewController
+    }
 
     private func addItem(item:StreamItem) {
         streamItems.append(item)
