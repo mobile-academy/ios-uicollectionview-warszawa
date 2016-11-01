@@ -3,3 +3,13 @@
 //
 
 import Foundation
+
+struct ExampleCalendarEvent: CalendarEvent {
+    
+    let name: String
+    
+    let startDate: Date
+    
+    let endDate: Date
+    
+}

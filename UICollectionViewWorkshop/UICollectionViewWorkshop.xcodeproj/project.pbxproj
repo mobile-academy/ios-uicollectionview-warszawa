@@ -480,9 +480,9 @@
 		B27A9BC841A356D49E18079A /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				B27A9A680799497AD66BE04A /* CalendarCollectionViewLayout.swift */,
 				B27A9D49A9550A1235E0E443 /* Attributes */,
 				B27A9F30B4BBDA69274AF2A6 /* Decoration Views */,
+				B27A9A680799497AD66BE04A /* CalendarCollectionViewLayout.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";

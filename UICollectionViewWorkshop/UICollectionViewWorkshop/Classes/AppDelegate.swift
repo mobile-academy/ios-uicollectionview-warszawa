@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         modifyAppearance()
         return true
     }
-
 }
+
 extension AppDelegate {
     fileprivate func modifyAppearance() {
         let workshopBackgroundColor = UIColor.barsBackgroundTint

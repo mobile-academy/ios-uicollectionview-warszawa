@@ -7,15 +7,14 @@ import UIKit
 
 final class CalendarViewController: UICollectionViewController {
     
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-        title = "Calendar"
-        tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "Clock"), tag: 2)
-        
-    }
+    let eventsProvider = EventsProvider(displayedDate: Date())
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        title = "Calendar"
+        tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(named: "Clock"), tag: 2)
     }
+    
     
 }
