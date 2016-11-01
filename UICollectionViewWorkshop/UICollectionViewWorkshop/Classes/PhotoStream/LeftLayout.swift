@@ -13,18 +13,22 @@ class LeftLayout: ColumnVariantLayout {
     }
 
     override func initialLayoutAttributesForAppearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        var attributes = super.initialLayoutAttributesForAppearingItem(at: itemIndexPath)
-
-        //TODO shift initial attributes so they are out of the screen on the right hand side
-
-        return attributes
+        let attributes = super.initialLayoutAttributesForAppearingItem(at: itemIndexPath)
+        return shiftedAttributes(from: attributes)
     }
 
     override func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         let attributes = super.finalLayoutAttributesForDisappearingItem(at: itemIndexPath)
+        return shiftedAttributes(from: attributes)
+    }
 
-        //TODO shift initial attributes so they are out of the screen on the right hand side
-
-        return attributes
+    private func shiftedAttributes(from attributes: UICollectionViewLayoutAttributes?) -> UICollectionViewLayoutAttributes? {
+        guard let layoutAttributes = attributes?.copy() as? UICollectionViewLayoutAttributes else {
+            return nil
+        }
+        var center = layoutAttributes.center
+        center.x = -CGFloat(itemSize.width) / 2.0
+        layoutAttributes.center = center
+        return layoutAttributes
     }
 }
