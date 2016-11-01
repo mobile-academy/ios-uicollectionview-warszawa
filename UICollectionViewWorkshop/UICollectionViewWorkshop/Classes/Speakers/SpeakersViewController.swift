@@ -23,17 +23,12 @@ import UIKit
 
 final class SpeakersViewController: UIViewController {
 
-	let dataSource: SpeakersDataSource
-
-	init(dataSource: SpeakersDataSource) {
-		self.dataSource = dataSource
-		super.init(nibName: nil, bundle: nil)
-		title = "Speakers"
-		tabBarItem = UITabBarItem(title: title, image: UIImage(named: "Speakers"), tag: 1)
-	}
+	let dataSource: SpeakersDataSource = SpeakersDataSource()
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("Sadly, this is required...")
+        super.init(coder: aDecoder)
+        title = "Speakers"
+        tabBarItem = UITabBarItem(title: title, image: UIImage(named: "Speakers"), tag: 1)
     }
 
 	override func loadView() {
