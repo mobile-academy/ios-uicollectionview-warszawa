@@ -47,6 +47,26 @@
 		9411D1261DC7C0010017D499 /* StreamItemDownloaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1061DC7BFE30017D499 /* StreamItemDownloaderSpec.swift */; };
 		9411D1271DC7C0040017D499 /* StreamItemTransformerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1081DC7BFE30017D499 /* StreamItemTransformerSpec.swift */; };
 		9411D1281DC7C0080017D499 /* StreamItemUploaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D10A1DC7BFE30017D499 /* StreamItemUploaderSpec.swift */; };
+		9411D1331DC7C4260017D499 /* AlertActionCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D12A1DC7C4260017D499 /* AlertActionCreating.swift */; };
+		9411D1351DC7C4260017D499 /* ImageManipulating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D12C1DC7C4260017D499 /* ImageManipulating.swift */; };
+		9411D1361DC7C4260017D499 /* ImagePickerCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D12D1DC7C4260017D499 /* ImagePickerCreating.swift */; };
+		9411D1371DC7C4260017D499 /* ImageResizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9411D12F1DC7C4260017D499 /* ImageResizer.m */; };
+		9411D1381DC7C4260017D499 /* MediaResourceTypeAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1301DC7C4260017D499 /* MediaResourceTypeAvailability.swift */; };
+		9411D1391DC7C4260017D499 /* ParseAdapting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1311DC7C4260017D499 /* ParseAdapting.swift */; };
+		9411D13A1DC7C4260017D499 /* ViewControllerPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1321DC7C4260017D499 /* ViewControllerPresenting.swift */; };
+		9411D16A1DC86D1D0017D499 /* AlertActionFactoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D15C1DC86D1D0017D499 /* AlertActionFactoryFake.swift */; };
+		9411D16B1DC86D1D0017D499 /* ImageManipulatorFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D15D1DC86D1D0017D499 /* ImageManipulatorFake.swift */; };
+		9411D16C1DC86D1D0017D499 /* ImagePickerFactoryFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D15E1DC86D1D0017D499 /* ImagePickerFactoryFake.swift */; };
+		9411D16D1DC86D1D0017D499 /* ParseAdapterFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D15F1DC86D1D0017D499 /* ParseAdapterFake.swift */; };
+		9411D16E1DC86D1D0017D499 /* SourceTypeAvailabilityFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1601DC86D1D0017D499 /* SourceTypeAvailabilityFake.swift */; };
+		9411D16F1DC86D1D0017D499 /* StreamItemCreatorFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1611DC86D1D0017D499 /* StreamItemCreatorFake.swift */; };
+		9411D1701DC86D1D0017D499 /* StreamItemDownloaderFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1621DC86D1D0017D499 /* StreamItemDownloaderFake.swift */; };
+		9411D1711DC86D1D0017D499 /* StreamItemUploaderFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1631DC86D1D0017D499 /* StreamItemUploaderFake.swift */; };
+		9411D1721DC86D1D0017D499 /* UICollectionViewFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1641DC86D1D0017D499 /* UICollectionViewFake.swift */; };
+		9411D1731DC86D1D0017D499 /* UIRefreshControlFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1651DC86D1D0017D499 /* UIRefreshControlFake.swift */; };
+		9411D1741DC86D1D0017D499 /* UITableViewFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1661DC86D1D0017D499 /* UITableViewFake.swift */; };
+		9411D1751DC86D1D0017D499 /* ViewControllerPresenterFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1671DC86D1D0017D499 /* ViewControllerPresenterFake.swift */; };
+		9411D1761DC86D1D0017D499 /* TestStreamItemCreatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1691DC86D1D0017D499 /* TestStreamItemCreatorDelegate.swift */; };
 		A18E343D1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E343C1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift */; };
 		B27A90BD33CC83B04BAC6C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27A9D4639130424FBEF5B0D /* Assets.xcassets */; };
 		B27A9112B1798EB62790E5F6 /* EventsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A93B84173CA7F454B8791 /* EventsProvider.swift */; };
@@ -120,7 +140,28 @@
 		9411D10E1DC7BFE30017D499 /* PhotoStreamViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewControllerSpec.swift; sourceTree = "<group>"; };
 		9411D10F1DC7BFE30017D499 /* StreamItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemViewController.swift; sourceTree = "<group>"; };
 		9411D1101DC7BFE30017D499 /* StreamItemViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemViewControllerSpec.swift; sourceTree = "<group>"; };
-		A18E34241DC4941500E1CC7E /* Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9411D12A1DC7C4260017D499 /* AlertActionCreating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionCreating.swift; sourceTree = "<group>"; };
+		9411D12C1DC7C4260017D499 /* ImageManipulating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManipulating.swift; sourceTree = "<group>"; };
+		9411D12D1DC7C4260017D499 /* ImagePickerCreating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerCreating.swift; sourceTree = "<group>"; };
+		9411D12E1DC7C4260017D499 /* ImageResizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageResizer.h; sourceTree = "<group>"; };
+		9411D12F1DC7C4260017D499 /* ImageResizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageResizer.m; sourceTree = "<group>"; };
+		9411D1301DC7C4260017D499 /* MediaResourceTypeAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaResourceTypeAvailability.swift; sourceTree = "<group>"; };
+		9411D1311DC7C4260017D499 /* ParseAdapting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseAdapting.swift; sourceTree = "<group>"; };
+		9411D1321DC7C4260017D499 /* ViewControllerPresenting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenting.swift; sourceTree = "<group>"; };
+		9411D15C1DC86D1D0017D499 /* AlertActionFactoryFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionFactoryFake.swift; sourceTree = "<group>"; };
+		9411D15D1DC86D1D0017D499 /* ImageManipulatorFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManipulatorFake.swift; sourceTree = "<group>"; };
+		9411D15E1DC86D1D0017D499 /* ImagePickerFactoryFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerFactoryFake.swift; sourceTree = "<group>"; };
+		9411D15F1DC86D1D0017D499 /* ParseAdapterFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseAdapterFake.swift; sourceTree = "<group>"; };
+		9411D1601DC86D1D0017D499 /* SourceTypeAvailabilityFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceTypeAvailabilityFake.swift; sourceTree = "<group>"; };
+		9411D1611DC86D1D0017D499 /* StreamItemCreatorFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemCreatorFake.swift; sourceTree = "<group>"; };
+		9411D1621DC86D1D0017D499 /* StreamItemDownloaderFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloaderFake.swift; sourceTree = "<group>"; };
+		9411D1631DC86D1D0017D499 /* StreamItemUploaderFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemUploaderFake.swift; sourceTree = "<group>"; };
+		9411D1641DC86D1D0017D499 /* UICollectionViewFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewFake.swift; sourceTree = "<group>"; };
+		9411D1651DC86D1D0017D499 /* UIRefreshControlFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIRefreshControlFake.swift; sourceTree = "<group>"; };
+		9411D1661DC86D1D0017D499 /* UITableViewFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewFake.swift; sourceTree = "<group>"; };
+		9411D1671DC86D1D0017D499 /* ViewControllerPresenterFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenterFake.swift; sourceTree = "<group>"; };
+		9411D1691DC86D1D0017D499 /* TestStreamItemCreatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestStreamItemCreatorDelegate.swift; sourceTree = "<group>"; };
+		A18E34241DC4941500E1CC7E /* UICollectionViewWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18E34381DC4941500E1CC7E /* UICollectionViewWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18E343C1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewWorkshopTests.swift; sourceTree = "<group>"; };
 		A18E343E1DC4941500E1CC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -267,6 +308,48 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		9411D1291DC7C4260017D499 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9411D12A1DC7C4260017D499 /* AlertActionCreating.swift */,
+				9411D12C1DC7C4260017D499 /* ImageManipulating.swift */,
+				9411D12D1DC7C4260017D499 /* ImagePickerCreating.swift */,
+				9411D12E1DC7C4260017D499 /* ImageResizer.h */,
+				9411D12F1DC7C4260017D499 /* ImageResizer.m */,
+				9411D1301DC7C4260017D499 /* MediaResourceTypeAvailability.swift */,
+				9411D1311DC7C4260017D499 /* ParseAdapting.swift */,
+				9411D1321DC7C4260017D499 /* ViewControllerPresenting.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9411D15B1DC86D1D0017D499 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				9411D15C1DC86D1D0017D499 /* AlertActionFactoryFake.swift */,
+				9411D15D1DC86D1D0017D499 /* ImageManipulatorFake.swift */,
+				9411D15E1DC86D1D0017D499 /* ImagePickerFactoryFake.swift */,
+				9411D15F1DC86D1D0017D499 /* ParseAdapterFake.swift */,
+				9411D1601DC86D1D0017D499 /* SourceTypeAvailabilityFake.swift */,
+				9411D1611DC86D1D0017D499 /* StreamItemCreatorFake.swift */,
+				9411D1621DC86D1D0017D499 /* StreamItemDownloaderFake.swift */,
+				9411D1631DC86D1D0017D499 /* StreamItemUploaderFake.swift */,
+				9411D1641DC86D1D0017D499 /* UICollectionViewFake.swift */,
+				9411D1651DC86D1D0017D499 /* UIRefreshControlFake.swift */,
+				9411D1661DC86D1D0017D499 /* UITableViewFake.swift */,
+				9411D1671DC86D1D0017D499 /* ViewControllerPresenterFake.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
+		9411D1681DC86D1D0017D499 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9411D1691DC86D1D0017D499 /* TestStreamItemCreatorDelegate.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		A18E341B1DC4941500E1CC7E = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +364,7 @@
 		A18E34251DC4941500E1CC7E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A18E34241DC4941500E1CC7E /* Workshop.app */,
+				A18E34241DC4941500E1CC7E /* UICollectionViewWorkshop.app */,
 				A18E34381DC4941500E1CC7E /* UICollectionViewWorkshopTests.xctest */,
 			);
 			name = Products;
@@ -290,6 +373,8 @@
 		A18E343B1DC4941500E1CC7E /* UICollectionViewWorkshopTests */ = {
 			isa = PBXGroup;
 			children = (
+				9411D15B1DC86D1D0017D499 /* Fakes */,
+				9411D1681DC86D1D0017D499 /* Helpers */,
 				A18E343C1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift */,
 				A18E343E1DC4941500E1CC7E /* Info.plist */,
 			);
@@ -338,6 +423,7 @@
 			children = (
 				B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */,
 				A13B61F11DC6797900604F01 /* Speakers */,
+				9411D1291DC7C4260017D499 /* Utils */,
 				9411D0FC1DC7BFE30017D499 /* PhotoStream */,
 				B27A9A882C1B68BD882E3139 /* Carousel */,
 				B27A904500286254959E893E /* Calendar */,
@@ -447,7 +533,7 @@
 			);
 			name = UICollectionViewWorkshop;
 			productName = UICollectionViewWorkshop;
-			productReference = A18E34241DC4941500E1CC7E /* Workshop.app */;
+			productReference = A18E34241DC4941500E1CC7E /* UICollectionViewWorkshop.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A18E34371DC4941500E1CC7E /* UICollectionViewWorkshopTests */ = {
@@ -644,26 +730,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9411D1371DC7C4260017D499 /* ImageResizer.m in Sources */,
 				9411D1131DC7BFE30017D499 /* ItemUploading.swift in Sources */,
 				9411D1141DC7BFE30017D499 /* StreamItem.swift in Sources */,
 				B27A91D8D1755EA86E2B34B7 /* AppDelegate.swift in Sources */,
+				9411D13A1DC7C4260017D499 /* ViewControllerPresenting.swift in Sources */,
 				9411D11E1DC7BFE30017D499 /* PhotoStreamLayout.swift in Sources */,
 				B27A9B86182FE01AE933D69F /* CarouselCollectionViewLayout.swift in Sources */,
 				9411D1211DC7BFE30017D499 /* StreamItemViewController.swift in Sources */,
 				B27A9471D78B0D046491ECD2 /* CarouselViewController.swift in Sources */,
 				9411D11D1DC7BFE30017D499 /* PhotoStreamCell.swift in Sources */,
 				B27A960692F47827D086110D /* CarouselCollectionViewCell.swift in Sources */,
+				9411D1331DC7C4260017D499 /* AlertActionCreating.swift in Sources */,
 				B27A979FBDADA4775F918163 /* CalendarViewController.swift in Sources */,
 				B27A9112B1798EB62790E5F6 /* EventsProvider.swift in Sources */,
 				B27A9E0C86C8194155CC3427 /* Event.swift in Sources */,
 				9411D1191DC7BFE30017D499 /* StreamItemTransformer.swift in Sources */,
 				9411D1151DC7BFE30017D499 /* StreamItemCreator.swift in Sources */,
+				9411D1391DC7C4260017D499 /* ParseAdapting.swift in Sources */,
 				9411D1111DC7BFE30017D499 /* ItemCreating.swift in Sources */,
 				9411D1171DC7BFE30017D499 /* StreamItemDownloader.swift in Sources */,
+				9411D1351DC7C4260017D499 /* ImageManipulating.swift in Sources */,
 				9411D1121DC7BFE30017D499 /* ItemDownloading.swift in Sources */,
 				B27A934967EDB19773236E05 /* CalendarCollectionViewCell.swift in Sources */,
+				9411D1381DC7C4260017D499 /* MediaResourceTypeAvailability.swift in Sources */,
 				9411D11F1DC7BFE30017D499 /* PhotoStreamViewController.swift in Sources */,
 				B27A98C257602B59672AA891 /* CalendarCollectionViewLayout.swift in Sources */,
+				9411D1361DC7C4260017D499 /* ImagePickerCreating.swift in Sources */,
 				9411D11B1DC7BFE30017D499 /* StreamItemUploader.swift in Sources */,
 				B27A9A3C7EEEDE593C2B5BB1 /* HandView.swift in Sources */,
 				B27A9FE606A0D4E1D6D4FE03 /* SeparatorView.swift in Sources */,
@@ -681,13 +774,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9411D1741DC86D1D0017D499 /* UITableViewFake.swift in Sources */,
+				9411D16E1DC86D1D0017D499 /* SourceTypeAvailabilityFake.swift in Sources */,
+				9411D1721DC86D1D0017D499 /* UICollectionViewFake.swift in Sources */,
 				9411D1281DC7C0080017D499 /* StreamItemUploaderSpec.swift in Sources */,
 				9411D1251DC7BFFC0017D499 /* StreamItemCreatorSpec.swift in Sources */,
 				9411D1271DC7C0040017D499 /* StreamItemTransformerSpec.swift in Sources */,
 				9411D1231DC7BFF00017D499 /* PhotoStreamViewControllerSpec.swift in Sources */,
+				9411D1711DC86D1D0017D499 /* StreamItemUploaderFake.swift in Sources */,
+				9411D16B1DC86D1D0017D499 /* ImageManipulatorFake.swift in Sources */,
+				9411D16F1DC86D1D0017D499 /* StreamItemCreatorFake.swift in Sources */,
+				9411D16A1DC86D1D0017D499 /* AlertActionFactoryFake.swift in Sources */,
+				9411D1701DC86D1D0017D499 /* StreamItemDownloaderFake.swift in Sources */,
+				9411D1731DC86D1D0017D499 /* UIRefreshControlFake.swift in Sources */,
 				9411D1241DC7BFF40017D499 /* StreamItemViewControllerSpec.swift in Sources */,
 				9411D1261DC7C0010017D499 /* StreamItemDownloaderSpec.swift in Sources */,
+				9411D16D1DC86D1D0017D499 /* ParseAdapterFake.swift in Sources */,
+				9411D1761DC86D1D0017D499 /* TestStreamItemCreatorDelegate.swift in Sources */,
+				9411D1751DC86D1D0017D499 /* ViewControllerPresenterFake.swift in Sources */,
 				A18E343D1DC4941500E1CC7E /* UICollectionViewWorkshopTests.swift in Sources */,
+				9411D16C1DC86D1D0017D499 /* ImagePickerFactoryFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,7 +920,7 @@
 				INFOPLIST_FILE = UICollectionViewWorkshop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mobile-academy.UICollectionViewWorkshop";
-				PRODUCT_NAME = Workshop;
+				PRODUCT_NAME = UICollectionViewWorkshop;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -828,7 +934,7 @@
 				INFOPLIST_FILE = UICollectionViewWorkshop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mobile-academy.UICollectionViewWorkshop";
-				PRODUCT_NAME = Workshop;
+				PRODUCT_NAME = UICollectionViewWorkshop;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -838,7 +944,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 83B74BC379CD21E4940A82E6 /* Pods-UICollectionViewWorkshopTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = UICollectionViewWorkshopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -853,7 +958,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E3DDCF0DE8A4B7E6699446AE /* Pods-UICollectionViewWorkshopTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = UICollectionViewWorkshopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

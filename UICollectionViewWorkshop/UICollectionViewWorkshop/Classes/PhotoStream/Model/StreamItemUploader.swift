@@ -17,8 +17,8 @@ class StreamItemUploader: ItemUploading {
 
     //MARK: ItemUploading
 
-    func uploadItem(streamItem: StreamItem, completion: (Bool, ErrorType?) -> ()) {
-        let parseObject = transformer.parseObjectFromStreamItem(streamItem)
-        parseAdapter.uploadObject(parseObject, completion: completion)
+    func uploadItem(streamItem: StreamItem, completion: @escaping (Bool, Error?) -> ()) {
+        let parseObject = transformer.parseObjectFromStreamItem(streamItem: streamItem)
+        parseAdapter.uploadObject(object: parseObject, completion: completion)
     }
 }

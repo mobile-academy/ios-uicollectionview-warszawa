@@ -3,6 +3,9 @@ platform :ios, '9.0'
 target 'UICollectionViewWorkshop' do
   use_frameworks!
 
+  pod 'Parse'  
+  pod 'UIImage-Resize', '~> 1.0'
+
   target 'UICollectionViewWorkshopTests' do
     inherit! :search_paths
     pod 'Quick'

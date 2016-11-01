@@ -5,5 +5,5 @@
 import Foundation
 
 protocol ItemDownloading {
-    func downloadItems(completion: ([StreamItem]?, ErrorType?) -> ())
+    func downloadItems(completion: @escaping ([StreamItem]?, Error?) -> ())
 }

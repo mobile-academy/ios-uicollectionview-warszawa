@@ -3,7 +3,7 @@ import Nimble
 import Parse
 
 @testable
-import TDDWorkshop
+import UICollectionViewWorkshop
 
 class StreamItemDownloaderSpec: QuickSpec {
     override func spec() {
@@ -20,7 +20,7 @@ class StreamItemDownloaderSpec: QuickSpec {
             describe("download items") {
 
                 var downloadedItems: [StreamItem]?
-                var capturedError: ErrorType?
+                var capturedError: Error?
 
                 beforeEach {
                     sut.downloadItems {

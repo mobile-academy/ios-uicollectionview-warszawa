@@ -2,7 +2,7 @@ import Quick
 import Nimble
 
 @testable
-import TDDWorkshop
+import UICollectionViewWorkshop
 
 class StreamItemUploaderSpec: QuickSpec {
     override func spec() {
@@ -20,12 +20,12 @@ class StreamItemUploaderSpec: QuickSpec {
 
                 var fixtureItem: StreamItem!
                 var capturedSuccess: Bool?
-                var capturedError: ErrorType?
+                var capturedError: Error?
 
                 beforeEach {
                     fixtureItem = StreamItem(title: "Foo Bar", imageData: NSData())
                     capturedSuccess = nil
-                    sut.uploadItem(fixtureItem) {
+                    sut.uploadItem(streamItem: fixtureItem) {
                         success, error in
                         capturedSuccess = success
                         capturedError = error

@@ -2,7 +2,7 @@ import Quick
 import Nimble
 
 @testable
-import TDDWorkshop
+import UICollectionViewWorkshop
 
 class PhotoStreamViewControllerSpec: QuickSpec {
     override func spec() {
@@ -23,7 +23,7 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                 presenter = ViewControllerPresenterFake()
 
                 let storyboard = UIStoryboard(name: "PhotoStream", bundle: nil)
-                sut = storyboard.instantiateViewControllerWithIdentifier("PhotoStream") as! PhotoStreamViewController
+                sut = storyboard.instantiateViewController(withIdentifier: "PhotoStream") as! PhotoStreamViewController
 
                 sut.downloader = downloader
                 sut.uploader = uploader
@@ -44,7 +44,7 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                     var collectionViewFake : UICollectionViewFake!
 
                     beforeEach {
-                        collectionViewFake = UICollectionViewFake(frame: CGRectZero,
+                        collectionViewFake = UICollectionViewFake(frame: CGRect(),
                                 collectionViewLayout: UICollectionViewFlowLayout())
                         refreshControlFake = UIRefreshControlFake()
 
@@ -97,7 +97,7 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                 describe("when pressed") {
                     beforeEach {
                         let action = barButtonItem!.action
-                        sut.performSelector(action, withObject: barButtonItem!)
+                        sut.performSelector(inBackground: action!, with: barButtonItem!)
                     }
                     it("should request item creation") {
                         expect(creator.createItemCalled) == true
@@ -110,7 +110,7 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                     var fixtureItem: StreamItem!
                     beforeEach {
                         fixtureItem = StreamItem(title: "Foo", imageData: NSData())
-                        sut.creator(creator, didCreateItem: fixtureItem)
+                        sut.creator(creator: creator, didCreateItem: fixtureItem)
                     }
                     it("should upload item") {
                         expect(uploader.uploadItemCalled) == true
@@ -119,7 +119,7 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                         var collectionViewFake : UICollectionViewFake!
 
                         beforeEach {
-                            collectionViewFake = UICollectionViewFake(frame: CGRectZero,
+                            collectionViewFake = UICollectionViewFake(frame: CGRect(),
                                     collectionViewLayout: UICollectionViewFlowLayout())
                             sut.collectionView = collectionViewFake
                         }
@@ -160,7 +160,7 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                 }
                 context("failed to create item") {
                     beforeEach {
-                        sut.creator(creator, failedWithError: NSError(domain:"Foo", code: 123, userInfo: nil))
+                        sut.creator(creator: creator, failedWithError: NSError(domain:"Foo", code: 123, userInfo: nil))
                     }
                     it("should present alert controller") {
                         expect(presenter.capturedPresentedViewController as? UIAlertController).notTo(beNil())

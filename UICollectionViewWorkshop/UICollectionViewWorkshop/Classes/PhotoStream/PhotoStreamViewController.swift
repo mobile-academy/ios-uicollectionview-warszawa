@@ -46,18 +46,19 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
 
     //MARK: UICollectionViewDataSource
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return streamItems.count
     }
-
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoStreamCell", forIndexPath: indexPath)
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoStreamCell", for: indexPath as IndexPath)
         if let photoCell = cell as? PhotoStreamCell {
             let streamItem = streamItems[indexPath.row]
-            photoCell.imageView.image = imageManipulator.imageFromData(streamItem.imageData)
+            photoCell.imageView.image = imageManipulator.imageFromData(data: streamItem.imageData)
         }
         return cell
     }
+
 
     //MARK: Actions
 
@@ -68,30 +69,31 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
     func didPullToRefresh(refreshControl: UIRefreshControl) {
         downloadStreamItems()
     }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let itemViewController = segue.destinationViewController as? StreamItemViewController,
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let itemViewController = segue.destination as? StreamItemViewController,
         let cell = sender as? UICollectionViewCell,
-        let indexPath = collectionView?.indexPathForCell(cell) {
+        let indexPath = collectionView?.indexPath(for: cell) {
             itemViewController.streamItem = streamItems[indexPath.item]
         }
+
     }
 
     //MARK: ItemCreatingDelegate
 
     func creator(creator: ItemCreating, didCreateItem item: StreamItem) {
-        uploader.uploadItem(item) {
+        uploader.uploadItem(streamItem: item) {
             [weak self] success, error in
             if success == false {
-                self?.presentErrorAlertWithMessage("Failed to upload stream item!")
+                self?.presentErrorAlertWithMessage(message: "Failed to upload stream item!")
             } else {
-                self?.addItem(item)
+                self?.addItem(item: item)
             }
         }
     }
 
-    func creator(creator: ItemCreating, failedWithError: ErrorType) {
-        presentErrorAlertWithMessage("Failed to create stream item!")
+    func creator(creator: ItemCreating, failedWithError: Error) {
+        presentErrorAlertWithMessage(message: "Failed to create stream item!")
     }
 
     //MARK: Private methods
@@ -102,14 +104,14 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
     }
 
     private func presentErrorAlertWithMessage(message: String) {
-        let errorAlert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
-        errorAlert.addAction(alertActionFactory.createActionWithTitle("Cancel", style: .Cancel) {
+        let errorAlert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        errorAlert.addAction(alertActionFactory.createActionWithTitle(title: "Cancel", style: .cancel) {
             action in })
-        presenter.presentViewController(errorAlert)
+        presenter.presentViewController(viewController: errorAlert)
     }
 
     private func setupCollectionView() {
-        refreshControl.addTarget(self, action: #selector(didPullToRefresh), forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: UIControlEvents.valueChanged)
         collectionView?.addSubview(refreshControl)
         collectionView?.alwaysBounceVertical = true
     }
@@ -119,7 +121,7 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
             [weak self] items, error in
             self?.refreshControl.endRefreshing()
             if error != nil || items == nil {
-                self?.presentErrorAlertWithMessage("Failed to download stream items!")
+                self?.presentErrorAlertWithMessage(message: "Failed to download stream items!")
             } else {
                 self?.streamItems = items!
                 self?.collectionView?.reloadData()

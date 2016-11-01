@@ -25,13 +25,13 @@ class StreamItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let item = streamItem {
-            imageView.image = imageManipulator.imageFromData(item.imageData)
+            imageView.image = imageManipulator.imageFromData(data: item.imageData)
         }
     }
 
     //MARK: Actions
     
     @IBAction func cancelBarButtonPressed(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true) {}
+        self.dismiss(animated: true) {}
     }
 }

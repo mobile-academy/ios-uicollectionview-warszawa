@@ -18,11 +18,11 @@ class StreamItemDownloader: ItemDownloading {
 
     //MARK: ItemDownloading
 
-    func downloadItems(completion: ([StreamItem]?, ErrorType?) -> ()) {
+    func downloadItems(completion: @escaping ([StreamItem]?, Error?) -> ()) {
 
         let query = PFQuery(className:StreamItem.entityName)
 
-        parseAdapter.executeQuery(query) {[weak self] objects, error in
+        parseAdapter.executeQuery(query: query) {[weak self] objects, error in
             guard error == nil,
             let parseObjects = objects else  {
                 completion(nil, error)
@@ -30,7 +30,7 @@ class StreamItemDownloader: ItemDownloading {
             }
             var streamItems = [StreamItem]()
             for object in parseObjects {
-                if let streamItem = self?.transformer.streamItemFromParseObject(object) {
+                if let streamItem = self?.transformer.streamItemFromParseObject(parseObject: object) {
                     streamItems.append(streamItem)
                 }
             }

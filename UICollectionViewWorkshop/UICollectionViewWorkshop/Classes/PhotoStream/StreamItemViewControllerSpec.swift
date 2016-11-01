@@ -2,7 +2,7 @@ import Quick
 import Nimble
 
 @testable
-import TDDWorkshop
+import UICollectionViewWorkshop
 
 class StreamItemViewControllerSpec: QuickSpec {
     override func spec() {
@@ -11,7 +11,7 @@ class StreamItemViewControllerSpec: QuickSpec {
 
             beforeEach {
                 let storyboard = UIStoryboard(name: "PhotoStream", bundle: nil)
-                sut = storyboard.instantiateViewControllerWithIdentifier("StreamItemPreview") as! StreamItemViewController
+                sut = storyboard.instantiateViewController(withIdentifier: "StreamItemPreview") as! StreamItemViewController
             }
             it("should work") {
                 expect(sut).notTo(beNil())

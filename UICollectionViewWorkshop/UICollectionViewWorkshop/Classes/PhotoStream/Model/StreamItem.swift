@@ -19,6 +19,6 @@ class StreamItem {
 
 extension StreamItem {
     func image() -> UIImage? {
-        return UIImage(data: imageData)
+        return UIImage(data: imageData as Data)
     }
 }

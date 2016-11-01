@@ -5,5 +5,5 @@
 import Foundation
 
 protocol ItemUploading {
-    func uploadItem(streamItem: StreamItem, completion: (Bool, ErrorType?) -> ())
+    func uploadItem(streamItem: StreamItem, completion: @escaping (Bool, Error?) -> ())
 }
