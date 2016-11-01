@@ -65,6 +65,9 @@
 		9411D1741DC86D1D0017D499 /* UITableViewFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1661DC86D1D0017D499 /* UITableViewFake.swift */; };
 		9411D1751DC86D1D0017D499 /* ViewControllerPresenterFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1671DC86D1D0017D499 /* ViewControllerPresenterFake.swift */; };
 		9411D1761DC86D1D0017D499 /* TestStreamItemCreatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411D1691DC86D1D0017D499 /* TestStreamItemCreatorDelegate.swift */; };
+		948DA1E51DC8E191005CE993 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948DA1E21DC8E191005CE993 /* Configuration.swift */; };
+		948DA1E61DC8E191005CE993 /* ConfigurationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948DA1E31DC8E191005CE993 /* ConfigurationFactory.swift */; };
+		948DA1E71DC8E191005CE993 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948DA1E41DC8E191005CE993 /* Configurator.swift */; };
 		948F322E1DC8CFC700A322DF /* Main-Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948F322C1DC8CFC700A322DF /* Main-Pad.storyboard */; };
 		94E77BCC1DC87653003A7E49 /* Main-Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E77BC81DC87653003A7E49 /* Main-Phone.storyboard */; };
 		94E77BCD1DC87653003A7E49 /* PhotoStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E77BCA1DC87653003A7E49 /* PhotoStream.storyboard */; };
@@ -163,6 +166,9 @@
 		9411D1661DC86D1D0017D499 /* UITableViewFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewFake.swift; sourceTree = "<group>"; };
 		9411D1671DC86D1D0017D499 /* ViewControllerPresenterFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenterFake.swift; sourceTree = "<group>"; };
 		9411D1691DC86D1D0017D499 /* TestStreamItemCreatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestStreamItemCreatorDelegate.swift; sourceTree = "<group>"; };
+		948DA1E21DC8E191005CE993 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		948DA1E31DC8E191005CE993 /* ConfigurationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationFactory.swift; sourceTree = "<group>"; };
+		948DA1E41DC8E191005CE993 /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		948F322D1DC8CFC700A322DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "UICollectionViewWorkshop/Base.lproj/Main-Pad.storyboard"; sourceTree = SOURCE_ROOT; };
 		94E77BC91DC87653003A7E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "UICollectionViewWorkshop/Base.lproj/Main-Phone.storyboard"; sourceTree = SOURCE_ROOT; };
 		94E77BCB1DC87653003A7E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UICollectionViewWorkshop/Base.lproj/PhotoStream.storyboard; sourceTree = SOURCE_ROOT; };
@@ -339,6 +345,16 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		948DA1E11DC8E191005CE993 /* App Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				948DA1E21DC8E191005CE993 /* Configuration.swift */,
+				948DA1E31DC8E191005CE993 /* ConfigurationFactory.swift */,
+				948DA1E41DC8E191005CE993 /* Configurator.swift */,
+			);
+			path = "App Configuration";
+			sourceTree = "<group>";
+		};
 		A13B61F11DC6797900604F01 /* Speakers */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +442,7 @@
 		B27A94E66AF6D3941366D0DF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				948DA1E11DC8E191005CE993 /* App Configuration */,
 				B27A9E7CF6FE1FE2B7C98E26 /* AppDelegate.swift */,
 				A13B61F11DC6797900604F01 /* Speakers */,
 				9411D1291DC7C4260017D499 /* Utils */,
@@ -759,9 +776,12 @@
 				9411D1391DC7C4260017D499 /* ParseAdapting.swift in Sources */,
 				9411D1111DC7BFE30017D499 /* ItemCreating.swift in Sources */,
 				9411D1171DC7BFE30017D499 /* StreamItemDownloader.swift in Sources */,
+				948DA1E51DC8E191005CE993 /* Configuration.swift in Sources */,
 				9411D1351DC7C4260017D499 /* ImageManipulating.swift in Sources */,
 				9411D1121DC7BFE30017D499 /* ItemDownloading.swift in Sources */,
+				948DA1E61DC8E191005CE993 /* ConfigurationFactory.swift in Sources */,
 				B27A934967EDB19773236E05 /* CalendarCollectionViewCell.swift in Sources */,
+				948DA1E71DC8E191005CE993 /* Configurator.swift in Sources */,
 				9411D1381DC7C4260017D499 /* MediaResourceTypeAvailability.swift in Sources */,
 				9411D11F1DC7BFE30017D499 /* PhotoStreamViewController.swift in Sources */,
 				B27A98C257602B59672AA891 /* CalendarCollectionViewLayout.swift in Sources */,

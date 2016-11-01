@@ -100,11 +100,11 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelBarButtonPressed:" destination="lhx-e1-8ze" eventType="touchUpInside" id="tpH-J6-Qw3"/>
+                                    <action selector="cancelBarButtonPressedWithSender:" destination="lhx-e1-8ze" eventType="touchUpInside" id="n5l-EZ-rcT"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhotoStream" translatesAutoresizingMaskIntoConstraints="NO" id="dMK-5e-Bct">
-                                <rect key="frame" x="179.5" y="325.5" width="16" height="16"/>
+                                <rect key="frame" x="175.5" y="324.5" width="24" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="520" id="dmN-2y-FJT"/>
                                 </constraints>

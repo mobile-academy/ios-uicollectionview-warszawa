@@ -11,6 +11,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var device = UIDevice.current
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let configuration = ConfigurationFactory().applicationConfiguration()
+        Configurator().configureApplication(configuration: configuration, launchOptions: launchOptions)
+        
         modifyAppearance()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController
