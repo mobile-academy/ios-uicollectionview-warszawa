@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D0C7B2577CA271CF21CECE5119B42D7E"
+               BlueprintIdentifier = "BC3924F7E932C74F7CDAF32FDC0DA46B"
                BuildableName = "UIImage_Resize.framework"
                BlueprintName = "UIImage-Resize"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D0C7B2577CA271CF21CECE5119B42D7E"
+            BlueprintIdentifier = "BC3924F7E932C74F7CDAF32FDC0DA46B"
             BuildableName = "UIImage_Resize.framework"
             BlueprintName = "UIImage-Resize"
             ReferencedContainer = "container:Pods.xcodeproj">

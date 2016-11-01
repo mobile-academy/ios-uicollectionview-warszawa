@@ -70,6 +70,11 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Photos" image="PhotoStream" id="ZN9-Tb-Lhc"/>
                     <navigationItem key="navigationItem" title="Photo Stream" id="ZuL-1y-Zzg">
+                        <barButtonItem key="leftBarButtonItem" title="Switch" id="m7z-3M-TCp">
+                            <connections>
+                                <action selector="toggleLayoutBarButtonItemPressedWithSender:" destination="K2V-uQ-pa6" id="xXi-d5-oeH"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZGS-V0-h7N">
                             <connections>
                                 <action selector="didPressAddItemBarButtonItemWithSender:" destination="K2V-uQ-pa6" id="iXj-nJ-3OG"/>

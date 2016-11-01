@@ -17,6 +17,8 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
 
     var streamItems = [StreamItem]()
 
+    private var layoutToggle = false
+
     required init?(coder: NSCoder) {
         parseAdapter = DefaultParseAdapter()
         presenter = DefaultViewControllerPresenter()
@@ -35,6 +37,7 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        toggleLayout(animated: false)
         downloadStreamItems()
     }
 
@@ -58,6 +61,10 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
 
     @IBAction func didPressAddItemBarButtonItem(sender: UIBarButtonItem!) {
         creator.createStreamItem()
+    }
+
+    @IBAction func toggleLayoutBarButtonItemPressed(sender: UIBarButtonItem!) {
+        toggleLayout(animated: true)
     }
 
     func didPullToRefresh(refreshControl: UIRefreshControl) {
@@ -107,6 +114,12 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: UIControlEvents.valueChanged)
         collectionView?.addSubview(refreshControl)
         collectionView?.alwaysBounceVertical = true
+    }
+
+    private func toggleLayout(animated: Bool) {
+        let layout = layoutToggle ? LeftLayout() : RightLayout()
+        collectionView?.setCollectionViewLayout(layout, animated: animated)
+        layoutToggle = !layoutToggle
     }
 
     private func downloadStreamItems() {
