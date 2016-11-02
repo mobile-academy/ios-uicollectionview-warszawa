@@ -22,7 +22,7 @@ class StreamItemPreviewLayout: UICollectionViewLayout {
             let indexPath = IndexPath(item: i, section: 0)
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             attributes.center = center
-            attributes.size = itemSize
+            adjust(layoutAttributes: attributes, for: indexPath)
             layoutAttributes.append(attributes)
         }
     }
@@ -35,6 +35,15 @@ class StreamItemPreviewLayout: UICollectionViewLayout {
         return layoutAttributes[indexPath.item]
     }
 
+    override func finalLayoutAttributesForDisappearingItem(at itemIndexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        let attributes = layoutAttributes[itemIndexPath.item]
+        if !isSelected(indexPath: itemIndexPath) {
+            attributes.size = PhotoStreamLayout.streamItemSize
+        }
+        return attributes
+    }
+
+
     override func invalidateLayout() {
         super.invalidateLayout()
         layoutAttributes = []
@@ -42,5 +51,27 @@ class StreamItemPreviewLayout: UICollectionViewLayout {
 
     override var collectionViewContentSize: CGSize {
         return collectionView!.bounds.size
+    }
+
+    private func adjust(layoutAttributes: UICollectionViewLayoutAttributes, for indexPath: IndexPath) {
+        if isSelected(indexPath: indexPath) {
+            layoutAttributes.size = itemSize
+            layoutAttributes.alpha = 1.0
+        } else {
+            layoutAttributes.size = CGSize()
+            layoutAttributes.alpha = 0.0
+        }
+    }
+
+    private func isSelected(indexPath: IndexPath) -> Bool {
+        guard let selectedPaths = collectionView?.indexPathsForSelectedItems else {
+            return false
+        }
+        for selectedIndexPath in selectedPaths {
+            if indexPath == selectedIndexPath {
+                return true
+            }
+        }
+        return false
     }
 }

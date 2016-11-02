@@ -17,6 +17,10 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
 
     var streamItems = [StreamItem]()
 
+    var photoStreamLayout: PhotoStreamLayout? {
+        return collectionView?.collectionViewLayout as? PhotoStreamLayout
+    }
+
     required init?(coder: NSCoder) {
         parseAdapter = DefaultParseAdapter()
         presenter = DefaultViewControllerPresenter()
@@ -57,6 +61,7 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         if let viewController = createStreamItemViewController() {
             viewController.streamItem = streamItems[indexPath.item]
             viewController.useLayoutToLayoutNavigationTransitions = true
+            photoStreamLayout?.presentedIndexPath = indexPath
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
