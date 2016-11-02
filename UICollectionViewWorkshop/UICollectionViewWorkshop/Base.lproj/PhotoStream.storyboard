@@ -29,10 +29,11 @@
         <scene sceneID="tdz-ny-3rm">
             <objects>
                 <collectionViewController storyboardIdentifier="PhotoStream" title="Photo Stream" id="K2V-uQ-pa6" customClass="PhotoStreamViewController" customModule="UICollectionViewWorkshop" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JQt-lv-8xf">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="JQt-lv-8xf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <collectionViewLayout key="collectionViewLayout" id="jfd-wo-Ikh" customClass="PhotoStreamLayout" customModule="UICollectionViewWorkshop" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="PhotoStreamCell" id="ZPH-Px-pLS" customClass="PhotoStreamCell" customModule="UICollectionViewWorkshop" customModuleProvider="target">
@@ -64,6 +65,7 @@
                         <connections>
                             <outlet property="dataSource" destination="K2V-uQ-pa6" id="zmV-1F-7nj"/>
                             <outlet property="delegate" destination="K2V-uQ-pa6" id="Ibw-8f-1xL"/>
+                            <outletCollection property="gestureRecognizers" destination="g2H-g1-SXE" appends="YES" id="6CA-5A-dcA"/>
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Photos" image="PhotoStream" id="ZN9-Tb-Lhc"/>
@@ -77,6 +79,11 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLn-SY-qOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="g2H-g1-SXE">
+                    <connections>
+                        <action selector="didPinchWith:" destination="K2V-uQ-pa6" id="s4d-xz-HOQ"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="830" y="-412"/>
         </scene>
@@ -84,10 +91,11 @@
         <scene sceneID="nB1-LA-UJe">
             <objects>
                 <collectionViewController storyboardIdentifier="StreamItemPreview" id="XPi-fI-KnM" customClass="StreamItemViewController" customModule="UICollectionViewWorkshop" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="s6m-6D-YCT">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="s6m-6D-YCT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <collectionViewLayout key="collectionViewLayout" id="6fl-m1-QmM" customClass="StreamItemPreviewLayout" customModule="UICollectionViewWorkshop" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RLd-Ew-wzd">
@@ -107,7 +115,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oB-zL-Irt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1353" y="-411"/>
+            <point key="canvasLocation" x="1634" y="-411"/>
         </scene>
     </scenes>
     <resources>

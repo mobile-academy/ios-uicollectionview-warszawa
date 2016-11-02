@@ -72,6 +72,29 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         creator.createStreamItem()
     }
 
+    @IBAction func didPinch(with recogniser: UIPinchGestureRecognizer!) {
+        let progress = recogniser.scale - 1.0 //naive way
+        switch (recogniser.state) {
+        case .began:
+            //TODO find index path for pinch and select item
+            //TODO start transition
+            //TODO save transition layout
+            break;
+        case .changed:
+            //TODO update transitionProgress and invalidateLayout
+            break;
+        case .ended:
+            //TODO finish transition if progress > 0.5
+            //TODO cancel transition if progress <= 0.5
+            break;
+        case .cancelled:
+            //TODO cancel transition
+            break;
+        default:
+            break;
+        }
+    }
+
     func didPullToRefresh(refreshControl: UIRefreshControl) {
         downloadStreamItems()
     }
