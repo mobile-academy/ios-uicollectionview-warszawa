@@ -68,6 +68,12 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         }
     }
 
+    /*
+    override func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout {
+        return //TODO create a subclass of UICollectionViewTransitionLayout and return here
+    }
+     */
+
     //MARK: Actions
 
     @IBAction func didPressAddItemBarButtonItem(sender: UIBarButtonItem!) {
