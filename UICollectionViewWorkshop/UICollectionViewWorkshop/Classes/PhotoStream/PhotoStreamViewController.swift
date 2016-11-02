@@ -21,6 +21,8 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         return collectionView?.collectionViewLayout as? PhotoStreamLayout
     }
 
+    var transitionLayout: UICollectionViewTransitionLayout?
+
     required init?(coder: NSCoder) {
         parseAdapter = DefaultParseAdapter()
         presenter = DefaultViewControllerPresenter()
@@ -76,22 +78,23 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         let progress = recogniser.scale - 1.0 //naive way
         switch (recogniser.state) {
         case .began:
-            //TODO find index path for pinch and select item
-            //TODO start transition
-            //TODO save transition layout
-            break;
+            collectionView?.selectItem(at: indexPath(for: recogniser), animated: false, scrollPosition: [])
+            transitionLayout = collectionView?.startInteractiveTransition(to: StreamItemPreviewLayout()) { [weak self] completed, finished in
+                self?.transitionLayout = nil
+            }
         case .changed:
-            //TODO update transitionProgress and invalidateLayout
-            break;
+            transitionLayout?.transitionProgress = progress
+            transitionLayout?.invalidateLayout()
         case .ended:
-            //TODO finish transition if progress > 0.5
-            //TODO cancel transition if progress <= 0.5
-            break;
+            if progress > 0.5 {
+                collectionView?.finishInteractiveTransition()
+            } else {
+                collectionView?.cancelInteractiveTransition()
+            }
         case .cancelled:
-            //TODO cancel transition
-            break;
+            collectionView?.cancelInteractiveTransition()
         default:
-            break;
+            break
         }
     }
 
@@ -117,6 +120,11 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
     }
 
     //MARK: Private methods
+
+    private func indexPath(for recogniser: UIGestureRecognizer) -> IndexPath? {
+        let location = recogniser.location(in: collectionView)
+        return collectionView?.indexPathForItem(at: location)
+    }
 
     private func createStreamItemViewController() -> StreamItemViewController? {
         let viewController = UIStoryboard(name: "PhotoStream", bundle: nil).instantiateViewController(withIdentifier: "StreamItemPreview")
