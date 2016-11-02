@@ -56,6 +56,7 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let viewController = createStreamItemViewController() {
             viewController.streamItem = streamItems[indexPath.item]
+            viewController.useLayoutToLayoutNavigationTransitions = true
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
