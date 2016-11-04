@@ -21,6 +21,8 @@ class CarouselCollectionViewLayout: UICollectionViewLayout {
 
     private var topBottomMargin: CGFloat = 0
     private var leftRightMargin: CGFloat = 0
+    
+    private var lastCenteredLayoutAttributesIndexPath: IndexPath?
 
     override func prepare() {
         super.prepare()
@@ -45,14 +47,14 @@ class CarouselCollectionViewLayout: UICollectionViewLayout {
 
         let minimalXPosition = rect.minX - leftRightMargin
         let maximalXPosition = rect.maxX - leftRightMargin
-        
+
         var firstVisibleItem = Int(floorf(Float(minimalXPosition / combinedItemWidth)))
         var lastVisibleItem = Int(ceilf(Float(maximalXPosition / combinedItemWidth)))
 
         if firstVisibleItem < 0 {
             firstVisibleItem = 0
         }
-        
+
         if lastVisibleItem < 0 {
             lastVisibleItem = 0
         }
@@ -61,15 +63,23 @@ class CarouselCollectionViewLayout: UICollectionViewLayout {
             lastVisibleItem = numberOfItems
         }
 
-        //TODO: Calculate position for visible cells
+        var allAttributes = [UICollectionViewLayoutAttributes]()
 
-        return []
+        for item in firstVisibleItem ..< lastVisibleItem {
+            let indexPath = IndexPath(item: item, section: 0)
+            allAttributes.append(self.layoutAttributesForItem(at: indexPath)!)
+        }
+
+        return allAttributes
     }
 
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
 
-        //TODO: Calculate position for item at given index path
+        let x = leftRightMargin + CGFloat(indexPath.row) * (itemSize.width + interItemSpacing) + itemSize.width / 2;
+
+        attributes.size = itemSize
+        attributes.center = CGPoint(x: x, y: collectionView!.bounds.height / 2)
 
         return attributes
     }
@@ -83,16 +93,21 @@ class CarouselCollectionViewLayout: UICollectionViewLayout {
         guard let attributes = layoutAttributes(forUserFingerMovingWithVelocity: velocity, proposedContentOffset: proposedContentOffset) else {
             return proposedContentOffset
         }
+
+        lastCenteredLayoutAttributesIndexPath = attributes.indexPath
         
-        let xPosition = attributes.center.x - collectionView!.bounds.width / 2        
+        let xPosition = attributes.center.x - collectionView!.bounds.width / 2
         return CGPoint(x: xPosition, y: 0)
     }
 
     //Tip: this method is called when collection view bounds change - collection view asks us whether we'd like to adjust
     // content offset to adjust for new bounds
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
-        //TODO: Calculate the content offset that should be visible after rotation to keep our item centered
-        return super.targetContentOffset(forProposedContentOffset: proposedContentOffset)
+        guard let indexPath = lastCenteredLayoutAttributesIndexPath, let attributes = layoutAttributesForItem(at: indexPath) else {
+            return proposedContentOffset
+        }
+        let xPosition = attributes.center.x - collectionView!.bounds.width / 2
+        return CGPoint(x: xPosition, y: 0)
     }
 
     //MARK: Invalidation
@@ -106,10 +121,28 @@ fileprivate extension CarouselCollectionViewLayout {
 
     func layoutAttributes(forUserFingerMovingWithVelocity velocity: CGPoint, proposedContentOffset: CGPoint) -> UICollectionViewLayoutAttributes? {
         let nextVisibleBounds = CGRect(origin: proposedContentOffset, size: collectionView!.bounds.size)
+        let allAttributes = layoutAttributesForElements(in: nextVisibleBounds)
 
-        //TODO: Calculate which layout attributes should be selected as next centered layout attributes.
-        //Tips: Use nextVisibleBounds calculated above! Make sure you also use velocity for determining direction (left, right or just dragging - all cases are important!)
+        var finalLayoutAttributes: UICollectionViewLayoutAttributes?
 
-        return nil
+        if velocity.x > 0 {
+            finalLayoutAttributes = allAttributes?.last
+        } else if velocity.x < 0 {
+            finalLayoutAttributes = allAttributes?.first
+        } else {
+            var distance: CGFloat = CGFloat.greatestFiniteMagnitude
+            
+            for attributes in allAttributes! {
+                let nextMidXPosition = nextVisibleBounds.midX
+                let candidateDistance = fabs(nextMidXPosition - attributes.center.x)
+                
+                if candidateDistance < distance {
+                    distance = candidateDistance
+                    finalLayoutAttributes = attributes
+                }
+            }
+        }
+
+        return finalLayoutAttributes
     }
 }
