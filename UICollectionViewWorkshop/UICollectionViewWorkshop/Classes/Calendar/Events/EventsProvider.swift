@@ -6,28 +6,28 @@ import Foundation
 
 
 class EventsProvider {
-    
+
     let displayedDate: Date
-    
+
     init(displayedDate: Date) {
         self.displayedDate = displayedDate
     }
-    
-    func makeEvents() -> [CalendarEvent] {
-        var events = [CalendarEvent]()
-        
+
+    func events() -> [ExampleCalendarEvent] {
+        var events = [ExampleCalendarEvent]()
+
         events.append(ExampleCalendarEvent(name: "TDD Workshop Summary",
-                                           startDate: Date(),
-                                           endDate: Date()))
-        
+                startDate: 8.hours.from(date: displayedDate)!,
+                endDate: 10.hours.from(date: displayedDate)!))
+
         events.append(ExampleCalendarEvent(name: "RxSwift Workshop - Planning",
-                                           startDate: Date(),
-                                           endDate: Date()))
-        
+                startDate: 12.hours.from(date: displayedDate)!,
+                endDate: 13.hours.from(date: displayedDate)!))
+
         events.append(ExampleCalendarEvent(name: "Animations Workshop - Scope",
-                                           startDate: Date(),
-                                           endDate: Date()))
-        
+                startDate: 16.hours.from(date: displayedDate)!,
+                endDate: 18.hours.from(date: displayedDate)!))
+
         return events
     }
 }

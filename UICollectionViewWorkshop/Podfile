@@ -3,7 +3,8 @@ platform :ios, '9.0'
 target 'UICollectionViewWorkshop' do
   use_frameworks!
 
-  pod 'Parse'  
+  pod 'Parse'
+  pod 'SwiftDate'
   pod 'UIImage-Resize', '~> 1.0'
 
   target 'UICollectionViewWorkshopTests' do

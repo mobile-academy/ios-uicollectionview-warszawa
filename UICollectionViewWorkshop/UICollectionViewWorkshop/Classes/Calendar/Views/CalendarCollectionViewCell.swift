@@ -6,7 +6,7 @@ import Foundation
 import UIKit
 
 class CalendarCollectionViewCell: UICollectionViewCell {
-    
+
     let textLabel: UILabel
 
     override init(frame: CGRect) {
@@ -29,7 +29,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         textLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: 20)
         textLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20)
         textLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
-        
+
         backgroundColor = UIColor.lightGray.withAlphaComponent(0.6)
         layer.cornerRadius = 6.0
         layer.masksToBounds = true

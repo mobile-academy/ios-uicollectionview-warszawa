@@ -4,6 +4,7 @@
 
 import Foundation
 import UIKit
+import SwiftDate
 
 protocol CalendarEvent {
     var startDate: Date { get }
@@ -61,7 +62,7 @@ class CalendarCollectionViewLayout: UICollectionViewLayout {
 
     override var collectionViewContentSize: CGSize {
         var collectionViewContentSize = super.collectionViewContentSize
-        collectionViewContentSize.height = 0 //[self.startOfDisplayedDay mt_minutesUntilDate:self.endOfDisplayedDay]
+        collectionViewContentSize.height = CGFloat(startOfDisplayedDay.minutes(toDate: endOfDisplayedDay))
         return collectionViewContentSize
     }
 
@@ -141,5 +142,14 @@ extension UICollectionViewLayoutAttributes {
 
     convenience init(calendarDecorationViewKind: CalendarDecorationViewKind, with indexPath: IndexPath) {
         self.init(forDecorationViewOfKind: calendarDecorationViewKind.rawValue, with: indexPath)
+    }
+}
+
+fileprivate extension Date {
+    
+    func minutes(toDate date: Date) -> Int {
+        let calendar = Calendar.current
+        
+        return calendar.dateComponents([.minute], from: self, to: date).minute!
     }
 }
