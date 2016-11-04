@@ -7,7 +7,7 @@ import Foundation
 class ConfigurationFactory {
 
     func applicationConfiguration() -> Configuration {
-        return Configuration(parseApplicationID:"b15TPKHKv3ggRl9zrEE3UX8ZLWEN6b9eAf4rqzwJ",
-                parseClientID: "C1XY1RmFA7atjhTFZ1ghF7IscSnLIyBQfM6PTot4")
+        return Configuration(parseApplicationID:"Crb1hgqe9mXf99KLvSJU0yGltz9cVDjfZLdwhLdm",
+                parseClientID: "NEloZHdfozcyHg7lbJemKzl37LTwXlYiZ6GvEDYH")
     }
 }
