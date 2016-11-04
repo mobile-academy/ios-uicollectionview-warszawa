@@ -7,7 +7,7 @@ import UIKit
 
 class CarouselCollectionViewLayout: UICollectionViewLayout {
 
-    var itemSize: CGSize = CGSize(width: 280, height: 240) {
+    var itemSize: CGSize = CGSize(width: 540, height: 300) {
         didSet(value) {
             invalidateLayout()
         }
