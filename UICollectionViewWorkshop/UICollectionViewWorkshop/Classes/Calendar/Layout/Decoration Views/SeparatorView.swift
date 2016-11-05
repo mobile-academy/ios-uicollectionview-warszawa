@@ -34,14 +34,16 @@ class SeparatorView: UICollectionReusableView {
     //MARK: Setup Helpers
 
     fileprivate func setupConstraints() {
+        separator.translatesAutoresizingMaskIntoConstraints = false
         separator.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        separator.centerYAnchor.constraint(equalTo: centerYAnchor)
+        separator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         separator.leftAnchor.constraint(equalTo: leftAnchor, constant: 70).isActive = true
         separator.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-
+        
+        separatorLabel.translatesAutoresizingMaskIntoConstraints = false
         separatorLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 5).isActive = true
         separatorLabel.rightAnchor.constraint(equalTo: separator.rightAnchor, constant: 5).isActive = true
-        separatorLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+        separatorLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
 
     //MARK: UICollectionReusableView

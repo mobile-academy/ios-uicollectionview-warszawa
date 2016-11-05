@@ -30,7 +30,8 @@ class CalendarCollectionViewLayout: UICollectionViewLayout {
 
     let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
         dateFormatter.timeZone = TimeZone.current
         return dateFormatter
     }()
@@ -57,7 +58,9 @@ class CalendarCollectionViewLayout: UICollectionViewLayout {
         handViewDate = calendarDelegate.handViewDate(forCalendarCollectionViewLayout: self)
 
         //TODO  Assignment 2: Register hand view class
+        //TODO  Assignment 2: Calculate and cache cell attributes (use events from delegate)
         //TODO  Assignment 3: Register separator view class
+        //TODO  Assignment 3: Calculate and cache separator attributes
     }
 
     override var collectionViewContentSize: CGSize {
@@ -74,7 +77,7 @@ class CalendarCollectionViewLayout: UICollectionViewLayout {
 
         //TODO Assignment 2: Add hand view attributes
 
-        return super.layoutAttributesForElements(in: rect)
+        return layoutAttributes
     }
 
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
@@ -130,11 +133,11 @@ fileprivate extension CalendarCollectionViewLayout {
     }
 
     func calculateSeparatorLayoutAttributes() -> [UICollectionViewLayoutAttributes] {
-        var cellsAttributes = [UICollectionViewLayoutAttributes]()
+        var separatorAttributes = [UICollectionViewLayoutAttributes]()
 
         // TODO Assignment 3: Calculate separator layout attributes based on number of full hours (include half hour separators as well!)
 
-        return cellsAttributes
+        return separatorAttributes
     }
 }
 
@@ -146,10 +149,16 @@ extension UICollectionViewLayoutAttributes {
 }
 
 fileprivate extension Date {
-    
+
     func minutes(toDate date: Date) -> Int {
         let calendar = Calendar.current
-        
+
         return calendar.dateComponents([.minute], from: self, to: date).minute!
+    }
+
+    func hours(toDate date: Date) -> Int {
+        let calendar = Calendar.current
+
+        return calendar.dateComponents([.hour], from: self, to: date).hour!
     }
 }

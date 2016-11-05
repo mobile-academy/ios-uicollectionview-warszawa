@@ -13,12 +13,16 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         textLabel = UILabel(frame: frame)
 
         super.init(frame: frame)
+        
+        setupLabel()
     }
 
     required init?(coder aDecoder: NSCoder) {
         textLabel = UILabel(frame: CGRect.zero)
 
         super.init(coder: aDecoder)
+        
+        setupLabel()
     }
 
     //MARK: Setup
@@ -26,9 +30,10 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     fileprivate func setupLabel() {
         contentView.addSubview(textLabel)
 
-        textLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: 20)
-        textLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20)
-        textLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+        textLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: 20).isActive = true
+        textLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
+        textLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
 
         backgroundColor = UIColor.lightGray.withAlphaComponent(0.6)
         layer.cornerRadius = 6.0
