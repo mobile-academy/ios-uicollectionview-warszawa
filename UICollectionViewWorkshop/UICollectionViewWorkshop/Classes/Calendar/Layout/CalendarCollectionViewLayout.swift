@@ -24,6 +24,8 @@ protocol CalendarCollectionViewLayoutDelegate: UICollectionViewDelegate {
     func endOfDisplayedDay(forCalendarCollectionViewLayout: CalendarCollectionViewLayout) -> Date
 
     func handViewDate(forCalendarCollectionViewLayout: CalendarCollectionViewLayout) -> Date
+
+    func calendarEvents(forCalendarCollectionViewLayout: CalendarCollectionViewLayout) -> [CalendarEvent]
 }
 
 class CalendarCollectionViewLayout: UICollectionViewLayout {
@@ -57,10 +59,12 @@ class CalendarCollectionViewLayout: UICollectionViewLayout {
         endOfDisplayedDay = calendarDelegate.endOfDisplayedDay(forCalendarCollectionViewLayout: self)
         handViewDate = calendarDelegate.handViewDate(forCalendarCollectionViewLayout: self)
 
-        //TODO  Assignment 2: Register hand view class
-        //TODO  Assignment 2: Calculate and cache cell attributes (use events from delegate)
-        //TODO  Assignment 3: Register separator view class
-        //TODO  Assignment 3: Calculate and cache separator attributes
+        register(HandView.self, forDecorationViewOfKind: CalendarDecorationViewKind.hand.rawValue)
+        register(SeparatorView.self, forDecorationViewOfKind: CalendarDecorationViewKind.separator.rawValue)
+
+        let events = calendarDelegate.calendarEvents(forCalendarCollectionViewLayout: self)
+        cachedCellsLayoutAttributes = calculateCellLayoutAttributes(forEvents: events)
+        cachedSeparatorsLayoutAttributes = calculateSeparatorLayoutAttributes()
     }
 
     override var collectionViewContentSize: CGSize {
@@ -74,8 +78,7 @@ class CalendarCollectionViewLayout: UICollectionViewLayout {
 
         layoutAttributes.append(contentsOf: cachedCellsLayoutAttributes)
         layoutAttributes.append(contentsOf: cachedSeparatorsLayoutAttributes)
-
-        //TODO Assignment 2: Add hand view attributes
+        layoutAttributes.append(calculateHandViewLayoutAttributes())
 
         return layoutAttributes
     }
@@ -113,8 +116,21 @@ fileprivate extension CalendarCollectionViewLayout {
         var cellsAttributes = [UICollectionViewLayoutAttributes]()
         let numberOfItems = collectionView!.numberOfItems(inSection: 0)
 
-        for a in 0 ... numberOfItems {
-            //TODO Assignment 2: Calculate position and size of layout attributes for cell for given event, based on its start and end date
+        for a in 0 ..< numberOfItems {
+            let event = events[a]
+
+            let attributes = UICollectionViewLayoutAttributes(forCellWith: IndexPath(item: a, section: 0))
+
+            let yPosition = CGFloat(startOfDisplayedDay.minutes(toDate: event.endDate))
+            let cellHeight = CGFloat(event.startDate.minutes(toDate: event.endDate))
+
+            var frame = CGRect.zero
+            frame.origin = CGPoint(x: 0, y: yPosition)
+            frame.size = CGSize(width: collectionView!.frame.width, height: cellHeight)
+
+            attributes.frame = frame
+
+            cellsAttributes.append(attributes)
         }
 
         return cellsAttributes
@@ -125,9 +141,12 @@ fileprivate extension CalendarCollectionViewLayout {
         let attributes = CalendarCollectionViewLayoutAttributes(calendarDecorationViewKind: .hand, with: indexPath)
         attributes.zIndex = 1
 
-        //TODO Assignment 2: Calculate appropriate frame for hand view
+        let xPosition = CGFloat(startOfDisplayedDay.minutes(toDate: handViewDate))
+        var frame = CGRect.zero
+        frame.size = CGSize(width: collectionView!.frame.width, height: 1)
+        frame.origin = CGPoint(x: 0, y: xPosition)
 
-        attributes.frame = CGRect.zero
+        attributes.frame = frame
 
         return attributes
     }
@@ -135,7 +154,31 @@ fileprivate extension CalendarCollectionViewLayout {
     func calculateSeparatorLayoutAttributes() -> [UICollectionViewLayoutAttributes] {
         var separatorAttributes = [UICollectionViewLayoutAttributes]()
 
-        // TODO Assignment 3: Calculate separator layout attributes based on number of full hours (include half hour separators as well!)
+        // We make a small assumption here that start of displayed date is a full hour
+        let hours = startOfDisplayedDay.hours(toDate: endOfDisplayedDay)
+
+        var elementIndex = 0
+
+        for hour in 0...hours {
+            let fullHour = startOfDisplayedDay + hour.hour
+            let attributes = CalendarCollectionViewLayoutAttributes(calendarDecorationViewKind: .separator, with: IndexPath(item: elementIndex, section: 0))
+            attributes.separatorColor = .lightGray
+            attributes.separatorText = dateFormatter.string(from: fullHour)
+            attributes.frame = CGRect(x: 0, y: CGFloat(startOfDisplayedDay.minutes(toDate: fullHour)) - 20, width: collectionView!.frame.width, height: 40)
+
+            separatorAttributes.append(attributes)
+
+            elementIndex += 1
+
+            let halfHour = fullHour + 30.minutes
+            let halfAttributes = CalendarCollectionViewLayoutAttributes(calendarDecorationViewKind: .separator, with: IndexPath(item: elementIndex, section: 0))
+            halfAttributes.separatorColor = .darkGray
+            halfAttributes.frame = CGRect(x: 0, y: CGFloat(startOfDisplayedDay.minutes(toDate: halfHour)) - 20, width: collectionView!.frame.width, height: 40)
+
+            separatorAttributes.append(halfAttributes)
+
+            elementIndex += 1
+        }
 
         return separatorAttributes
     }

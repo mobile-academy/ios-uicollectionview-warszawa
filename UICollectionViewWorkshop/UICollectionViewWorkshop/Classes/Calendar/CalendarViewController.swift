@@ -47,4 +47,7 @@ extension CalendarViewController: CalendarCollectionViewLayoutDelegate {
         return Date()
     }
 
+    func calendarEvents(forCalendarCollectionViewLayout: CalendarCollectionViewLayout) -> [CalendarEvent] {
+        return eventsProvider.events()
+    }
 }

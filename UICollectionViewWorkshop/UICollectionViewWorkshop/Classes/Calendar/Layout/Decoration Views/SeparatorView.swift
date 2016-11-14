@@ -51,7 +51,9 @@ class SeparatorView: UICollectionReusableView {
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
 
-        // TODO Assignment 3: Apply text and color from custom layout attributes
-
+        if let attributes = layoutAttributes as? CalendarCollectionViewLayoutAttributes {
+            separator.backgroundColor = attributes.separatorColor
+            separatorLabel.text = attributes.separatorText
+        }
     }
 }
